@@ -14,6 +14,21 @@ Página de links do salão (para a bio do Instagram) e materiais de divulgação
 Settings > Pages > Build and deployment: **Deploy from a branch**, branch `main`, pasta **/ (root)**.
 O endereço fica `https://kevinlaet.github.io/studiolarocha/links/`.
 
+## De onde a cliente veio
+
+Os botões do WhatsApp já abrem com a mensagem escrita, dizendo a origem ("Vim pelo Instagram do Studio La Rocha..."). A origem sai do endereço:
+
+| Onde o link aparece | Endereço |
+|---|---|
+| Bio do Instagram | `…/links/?de=instagram` |
+| Cartão de visita (QR) | `…/links/?de=cartao` |
+| Cartaz (QR) | `…/links/?de=cartaz` |
+| Espelho do salão (QR) | `…/links/?de=espelho` |
+| Perfil no Google | `…/links/?de=google` |
+| Site da Amanda | `…/links/?de=amanda` |
+
+Sem `?de=`, a página reconhece sozinha quando abre dentro do Instagram ou do Facebook; nos outros casos escreve "Vim pelo site do Studio La Rocha". Novas origens e textos ficam no `<script>` de `links/index.html` (`ORIGENS` e `MENSAGENS`).
+
 ## Antes de mudar alguma coisa
 
 - O nome é sempre **Studio La Rocha** ("Studio" sem acento).
