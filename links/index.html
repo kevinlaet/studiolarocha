@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Studio La Rocha · Links</title>
+<meta name="description" content="Studio La Rocha: beleza, saúde e bem-estar em Mauá (SP). Agende pelo WhatsApp.">
+<meta name="theme-color" content="#F7F1E8">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Studio La Rocha · Beleza, saúde e bem-estar">
+<meta property="og:description" content="Um espaço novo em Mauá para cuidar de você.">
+<link rel="icon" href="../img/simbolo.svg" type="image/svg+xml">
+<link rel="preload" href="../fonts/montserrat-sub.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Cormorant';src:url(../fonts/cormorant-sub.woff2) format('woff2');font-weight:500 600;font-display:swap}
+@font-face{font-family:'Great Vibes';src:url(../fonts/greatvibes-sub.woff2) format('woff2');font-display:swap}
+@font-face{font-family:'Montserrat';src:url(../fonts/montserrat-sub.woff2) format('woff2');font-weight:400 800;font-display:swap}
+:root{
+  --creme:#F7F1E8;--papel:#FFFCF7;--ouro:#B08D57;--ouro-c:#D9BC86;--ouro-e:#8E6E3E;--tinta:#2B2622;--tinta-2:#6A6058;--bronze:#9C7A45;--escuro:#1F1A17;--marfim:#F4EBDD;
+  --vidro:rgba(255,252,247,.62);--borda:rgba(176,141,87,.28);
+  --brilho:linear-gradient(100deg,#8E6E3E 0%,#C9A468 30%,#F1DEB4 48%,#C9A468 66%,#8E6E3E 100%);
+  color-scheme:light}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--creme);-webkit-tap-highlight-color:transparent}
+body{min-height:100vh;font-family:Montserrat,system-ui,sans-serif;color:var(--tinta);text-align:center;position:relative;overflow-x:hidden;isolation:isolate;background:var(--creme);
+ padding:calc(36px + env(safe-area-inset-top)) 18px calc(34px + env(safe-area-inset-bottom))}
+
+/* fundo: luzes douradas lentas + grade fina que some nas bordas */
+.fundo{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.fundo i{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;animation:flutua 18s ease-in-out infinite alternate}
+.fundo i:nth-child(1){width:340px;height:340px;background:#EAD3A6;top:-120px;left:-90px}
+.fundo i:nth-child(2){width:300px;height:300px;background:#F3E3C6;top:30%;right:-140px;animation-delay:-6s}
+.fundo i:nth-child(3){width:280px;height:280px;background:#E7CFA2;bottom:-120px;left:10%;animation-delay:-12s}
+.fundo:after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(156,122,69,.22) 1px,transparent 1.2px);background-size:22px 22px;-webkit-mask-image:radial-gradient(ellipse 70% 55% at 50% 22%,#000 20%,transparent 80%);mask-image:radial-gradient(ellipse 70% 55% at 50% 22%,#000 20%,transparent 80%)}
+
+main{max-width:430px;margin:0 auto}
+.entra{opacity:0;transform:translateY(14px);animation:entra .7s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--o,0) * 70ms + 80ms)}
+
+.selo{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--ouro-e);padding:8px 14px 8px 12px;border-radius:99px;border:1px solid var(--borda);background:var(--vidro);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.selo i{width:7px;height:7px;border-radius:50%;background:var(--ouro);animation:pulso 2.4s infinite}
+
+/* logo dentro de um anel dourado que gira devagar, com brilhinhos */
+.marca{position:relative;width:168px;height:168px;margin:26px auto 0;display:grid;place-items:center}
+.anel{position:absolute;inset:0;border-radius:50%;padding:1.5px;background:conic-gradient(from 0deg,transparent 0 12%,#C9A468 25%,#F1DEB4 32%,#C9A468 40%,transparent 55% 100%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:gira 9s linear infinite}
+.disco{position:absolute;inset:9px;border-radius:50%;background:radial-gradient(circle at 50% 35%,#fff,var(--papel) 60%,#F4EBDD);box-shadow:0 18px 40px rgba(142,110,62,.18),inset 0 0 0 1px rgba(176,141,87,.18)}
+.marca img{position:relative;width:86px;height:auto}
+.faisca{position:absolute;width:10px;height:10px;color:#C9A468;animation:pisca 3.2s ease-in-out infinite}
+.faisca svg{width:100%;height:100%;display:block}
+.faisca.a{top:10px;right:16px}
+.faisca.b{bottom:22px;left:4px;width:7px;height:7px;animation-delay:-1.1s}
+.faisca.c{top:46px;left:-4px;width:6px;height:6px;animation-delay:-2.2s}
+
+h1{font-family:Cormorant,Georgia,serif;font-weight:500;font-size:clamp(24px,7.2vw,30px);letter-spacing:.2em;padding-left:.2em;margin-top:22px;white-space:nowrap}
+.frase{font-family:'Great Vibes',cursive;font-size:clamp(28px,8.4vw,34px);line-height:1.25;background:var(--brilho);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:reflexo 6s ease-in-out infinite}
+.local{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:500;letter-spacing:.05em;color:var(--tinta-2);margin:10px 0 24px}
+.local svg{width:14px;height:14px}
+
+/* o que você encontra aqui */
+.titulo{font-size:10.5px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--bronze);margin:4px 0 12px;display:flex;align-items:center;gap:12px}
+.titulo:before,.titulo:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--borda))}
+.titulo:after{transform:scaleX(-1)}
+.servicos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:22px}
+.servicos a{display:flex;flex-direction:column;align-items:center;gap:9px;padding:16px 6px 14px;border-radius:18px;text-decoration:none;color:var(--tinta);background:var(--vidro);border:1px solid var(--borda);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);font-weight:700;font-size:12.5px;line-height:1.25;transition:transform .18s,box-shadow .25s,border-color .25s}
+.servicos a small{font-weight:500;font-size:10.5px;color:var(--tinta-2)}
+.servicos a:active{transform:scale(.96)}
+.servicos a:hover{border-color:var(--ouro);box-shadow:0 10px 24px rgba(142,110,62,.14)}
+.ico{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#FFF8EC,#F1E3C8);box-shadow:inset 0 0 0 1px rgba(176,141,87,.25),0 6px 14px rgba(142,110,62,.12)}
+.ico svg{width:23px;height:23px}
+
+nav{display:grid;gap:11px}
+a.l{position:relative;display:flex;align-items:center;gap:14px;min-height:68px;padding:12px 16px 12px 12px;border-radius:20px;text-decoration:none;text-align:left;font-weight:700;font-size:15.5px;color:var(--tinta);background:var(--vidro);border:1px solid var(--borda);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 6px 18px rgba(43,38,34,.04);transition:transform .18s,border-color .25s,box-shadow .25s;overflow:hidden}
+a.l:active{transform:scale(.98)}
+a.l:hover{border-color:var(--ouro);box-shadow:0 10px 26px rgba(142,110,62,.14)}
+a.l:focus-visible,.servicos a:focus-visible,.acoes button:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+a.l .txt{flex:1}
+a.l small{display:block;font-weight:500;font-size:12.5px;color:var(--tinta-2);margin-top:3px}
+a.l .seta{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;background:rgba(176,141,87,.12);color:var(--ouro-e);transition:transform .2s}
+a.l:hover .seta{transform:translateX(3px)}
+a.l .seta svg{width:14px;height:14px}
+
+/* botão principal: escuro, com um reflexo dourado que passa */
+a.l.principal{background:linear-gradient(160deg,#2B2622,#1F1A17);color:var(--marfim);border-color:rgba(201,164,104,.4);box-shadow:0 16px 34px rgba(31,26,23,.28)}
+a.l.principal small{color:rgba(244,235,221,.7)}
+a.l.principal .seta{background:rgba(201,164,104,.18);color:#E3C88F}
+a.l.principal:before{content:"";position:absolute;top:0;bottom:0;width:60%;left:-70%;background:linear-gradient(100deg,transparent,rgba(241,222,180,.22),transparent);transform:skewX(-18deg);animation:passa 4.5s ease-in-out infinite 1.4s}
+a.l.principal .ico{background:linear-gradient(145deg,#2F8F5B,#25D366);box-shadow:0 6px 16px rgba(37,211,102,.3)}
+.ico.wa svg{width:25px;height:25px}
+
+.acoes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:11px}
+.acoes a,.acoes button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:16px;border:1px solid var(--borda);background:var(--vidro);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);font:600 13px Montserrat,system-ui,sans-serif;color:var(--tinta);text-decoration:none;cursor:pointer;transition:transform .18s,border-color .25s}
+.acoes a:active,.acoes button:active{transform:scale(.97)}
+.acoes svg{width:18px;height:18px;color:var(--ouro-e)}
+
+.aviso{display:flex;gap:12px;align-items:flex-start;text-align:left;margin-top:24px;padding:14px 16px;border-radius:16px;background:rgba(255,252,247,.5);border:1px dashed rgba(176,141,87,.45);font-size:12.5px;line-height:1.5;color:var(--tinta-2)}
+.aviso svg{width:22px;height:22px;flex:none;color:var(--ouro);margin-top:1px}
+.aviso b{color:var(--tinta)}
+.credito{font-family:Cormorant,Georgia,serif;font-weight:600;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;opacity:.5;margin-top:26px}
+.credito:before{content:"";display:block;width:36px;height:1px;background:currentColor;opacity:.5;margin:0 auto 10px}
+
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translate(-50%,20px);opacity:0;padding:11px 18px;border-radius:99px;background:var(--escuro);color:var(--marfim);font-size:13px;font-weight:600;box-shadow:0 12px 30px rgba(0,0,0,.25);transition:all .3s;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@keyframes entra{to{opacity:1;transform:none}}
+@keyframes gira{to{transform:rotate(360deg)}}
+@keyframes pulso{0%{box-shadow:0 0 0 0 rgba(176,141,87,.55)}70%{box-shadow:0 0 0 9px rgba(176,141,87,0)}100%{box-shadow:0 0 0 0 rgba(176,141,87,0)}}
+@keyframes pisca{0%,100%{opacity:.25;transform:scale(.7) rotate(0)}50%{opacity:1;transform:scale(1.1) rotate(25deg)}}
+@keyframes reflexo{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+@keyframes passa{0%{left:-70%}55%,100%{left:130%}}
+@keyframes flutua{to{transform:translate(40px,30px) scale(1.12)}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.entra{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="fundo" aria-hidden="true"><i></i><i></i><i></i></div>
+<main>
+  <span class="selo entra" style="--o:0"><i></i>Inauguração em breve</span>
+
+  <div class="marca entra" style="--o:1" aria-hidden="true">
+    <div class="anel"></div><div class="disco"></div>
+    <img src="../img/simbolo.svg" alt="" width="651" height="780">
+    <span class="faisca a"><svg viewBox="0 0 10 10"><path fill="currentColor" d="M5 0l1.2 3.8L10 5 6.2 6.2 5 10 3.8 6.2 0 5l3.8-1.2z"/></svg></span>
+    <span class="faisca b"><svg viewBox="0 0 10 10"><path fill="currentColor" d="M5 0l1.2 3.8L10 5 6.2 6.2 5 10 3.8 6.2 0 5l3.8-1.2z"/></svg></span>
+    <span class="faisca c"><svg viewBox="0 0 10 10"><path fill="currentColor" d="M5 0l1.2 3.8L10 5 6.2 6.2 5 10 3.8 6.2 0 5l3.8-1.2z"/></svg></span>
+  </div>
+
+  <h1 class="entra" style="--o:2">STUDIO LA ROCHA</h1>
+  <div class="entra" style="--o:3"><div class="frase">Beleza, saúde e bem-estar</div></div>
+  <div class="local entra" style="--o:4"><svg viewBox="0 0 24 24" fill="none" stroke="#B08D57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Mauá · SP</div>
+
+  <div class="titulo entra" style="--o:5">O que você encontra aqui</div>
+  <!-- A CONFIRMAR com a Sandra: os serviços de cabelo -->
+  <div class="servicos">
+    <a class="entra" style="--o:6" href="https://wa.me/5511967682546?text=Ol%C3%A1!%20Quero%20saber%20sobre%20os%20servi%C3%A7os%20de%20cabelo%20do%20Studio%20La%20Rocha."><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#9C7A45" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="7" r="2.6"/><circle cx="6" cy="17" r="2.6"/><path d="M8.2 8.4L20 16M8.2 15.6L20 8"/></svg></span>Cabelo<small>Beleza</small></a>
+    <a class="entra" style="--o:7" href="https://amandarochabemestar.com.br/#agendar"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#9C7A45" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 18c-2-2-3-4-3-7a7 7 0 0 1 14 0c0 3-2.5 4.5-4 6.5S13.5 21 11 21c-1.5 0-2.5-1-3-3z"/><path d="M9 11a3 3 0 0 1 6 0c0 2-2 2.5-2 4"/></svg></span>Auriculo&shy;terapia<small>Saúde</small></a>
+    <a class="entra" style="--o:8" href="https://amandarochabemestar.com.br/#agendar"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#9C7A45" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 6 7 6 10.5A6 6 0 0 1 6 13.5C6 10 9 7 12 3z"/><path d="M9.5 14.5a2.6 2.6 0 0 0 2.5 2"/></svg></span>Limpeza de pele<small>Bem-estar</small></a>
+  </div>
+
+  <nav>
+    <!-- A CONFIRMAR: número oficial do salão (hoje, o WhatsApp da Sandra) -->
+    <a class="l principal entra" style="--o:9" href="https://wa.me/5511967682546?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20do%20Studio%20La%20Rocha%20e%20quero%20agendar."><span class="ico wa"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 4.5a11.5 11.5 0 0 0-9.9 17.3L4.5 27.5l5.9-1.5A11.5 11.5 0 1 0 16 4.5zm6.7 16.1c-.3.8-1.6 1.6-2.3 1.7-1.1.2-1.9.1-4.2-.8-3.5-1.5-5.7-5-5.9-5.3-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.6c.2 0 .5-.1.8.6l1.1 2.5c.1.2.1.4 0 .6-.6 1.3-1.3 1.2-.9 1.9a9.4 9.4 0 0 0 4.7 4.1c.4.2.6.2.8-.1l1-1.3c.3-.4.5-.3.8-.2l2.3 1.1c.4.2.6.3.7.4.1.2.1.9-.2 1.6z"/></svg></span><span class="txt">Agendar pelo WhatsApp<small>Resposta da equipe do salão</small></span><span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+
+    <a class="l entra" style="--o:10" href="https://amandarochabemestar.com.br/"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#9C7A45" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg></span><span class="txt">Nossas profissionais<small>Amanda Rocha · Enfermeira</small></span><span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+
+    <!-- LIGAR quando o endereço for confirmado:
+    <a class="l entra" style="--o:11" href="https://www.google.com/maps/search/?api=1&query=ENDERECO+CONFIRMADO+Maua+SP"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#9C7A45" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span class="txt">Como chegar<small>Vila Nova Mauá · Mauá - SP</small></span><span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+    -->
+
+    <!-- LIGAR quando o contrato de aluguel estiver pronto:
+    <a class="l entra" style="--o:12" href="https://wa.me/5511967682546?text=Ol%C3%A1%20Sandra!%20Sou%20profissional%20de%20beleza%20e%20tenho%20interesse%20no%20aluguel%20de%20cadeira%20ou%20maca."><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#9C7A45" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11h16v4H4zM6 15v5M18 15v5M7 11V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v4"/></svg></span><span class="txt">Profissional de beleza?<small>Alugue sua cadeira ou maca</small></span><span class="seta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></span></a>
+    -->
+  </nav>
+
+  <div class="acoes entra" style="--o:13">
+    <a href="studio-la-rocha.vcf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.4 3.3-5 6.5-5s5.7 1.6 6.5 5M19 8v6M16 11h6"/></svg>Salvar contato</a>
+    <button type="button" id="compartilhar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7.5 7.5L12 3l4.5 4.5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>Compartilhar</button>
+  </div>
+
+  <p class="aviso entra" style="--o:14"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.5c0 4.4-3 8-7 9.5-4-1.5-7-5.1-7-9.5V6z"/><path d="M9 12l2 2 4-4"/></svg><span><b>Pagamento só no salão.</b> Nunca pedimos Pix ou sinal por mensagem. Na dúvida, fale com a gente por este WhatsApp.</span></p>
+  <p class="credito">Desenvolvido por Kevin Laet</p>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite">Link copiado</div>
+<script>
+document.getElementById('compartilhar').addEventListener('click', async () => {
+  const dados = { title: 'Studio La Rocha', text: 'Studio La Rocha · Beleza, saúde e bem-estar em Mauá', url: location.href };
+  try {
+    if (navigator.share) { await navigator.share(dados); return; }
+    await navigator.clipboard.writeText(location.href);
+    const t = document.getElementById('toast');
+    t.classList.add('on');
+    setTimeout(() => t.classList.remove('on'), 2000);
+  } catch (e) {}
+});
+</script>
+</body>
+</html>

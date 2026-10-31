@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Studio La Rocha · Instagram</title>
+<style>
+  @font-face { font-family: "Cormorant"; src: url(cormorant.woff2) format("woff2"); font-weight: 300 700; }
+  @font-face { font-family: "Cormorant"; src: url(cormorant-italico.woff2) format("woff2"); font-style: italic; font-weight: 300 700; }
+  @font-face { font-family: "Great Vibes"; src: url(greatvibes.woff2) format("woff2"); }
+  @font-face { font-family: "Montserrat"; src: url(montserrat.woff2) format("woff2"); font-weight: 100 900; }
+
+  :root {
+    --creme: #F7F1E8;
+    --ouro: #B08D57;
+    --tinta: #2B2622;
+    --bronze: #9C7A45;
+    --escuro: #1F1A17;
+    --ouro-claro: #C9A468;
+    --marfim: #F4EBDD;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #888; }
+
+  .peca { position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; margin: 0 0 40px; }
+  .quadrado { width: 1080px; height: 1080px; }
+  .post { width: 1080px; height: 1350px; }
+  .claro { background: var(--creme); color: var(--tinta); }
+  .escuro { background: var(--escuro); color: var(--marfim); }
+
+  /* moldura fina, dentro da área que o perfil mostra (3:4) */
+  .moldura { position: absolute; inset: 56px; border: 2px solid var(--ouro); opacity: .55; pointer-events: none; }
+  .escuro .moldura { border-color: var(--ouro-claro); opacity: .4; }
+
+  .rotulo { font-family: "Montserrat"; font-weight: 500; font-size: 22px; letter-spacing: .42em; text-transform: uppercase; color: var(--bronze); padding-left: .42em; }
+  .escuro .rotulo { color: var(--ouro-claro); }
+  .arroba { position: absolute; bottom: 104px; left: 0; right: 0; font-family: "Montserrat"; font-weight: 500; font-size: 22px; letter-spacing: .3em; color: var(--bronze); }
+  .escuro .arroba { color: var(--ouro-claro); }
+
+  /* foto de perfil */
+  #perfil img { height: 730px; }
+
+  /* post 1: chegamos */
+  #chegamos .rotulo { margin-bottom: 70px; }
+  #chegamos img { width: 800px; }
+  #chegamos .frase { font-family: "Cormorant"; font-style: italic; font-weight: 500; font-size: 52px; line-height: 1.2; margin-top: 64px; }
+
+  /* post 2: nossa história */
+  #historia .rotulo { margin-bottom: 64px; }
+  #historia img { height: 470px; }
+  #historia h2 { font-family: "Cormorant"; font-weight: 500; font-size: 84px; line-height: 1.04; margin-top: 64px; letter-spacing: .01em; }
+  #historia p { font-family: "Montserrat"; font-weight: 400; font-size: 29px; line-height: 1.55; margin-top: 40px; max-width: 760px; color: rgba(244, 235, 221, .82); }
+
+  /* post 3: inauguração */
+  #inauguracao .rotulo { margin-bottom: 56px; }
+  #inauguracao h2 { font-family: "Cormorant"; font-weight: 500; font-size: 128px; line-height: 1; letter-spacing: .02em; }
+  #inauguracao .script { font-family: "Great Vibes"; font-size: 132px; line-height: 1; color: var(--ouro); margin-top: 6px; }
+  #inauguracao .divisor { display: flex; align-items: center; gap: 36px; margin: 72px 0 64px; }
+  #inauguracao .divisor span { width: 180px; height: 2px; background: var(--ouro); opacity: .6; }
+  #inauguracao .divisor img { height: 150px; }
+  #inauguracao p { font-family: "Montserrat"; font-weight: 400; font-size: 30px; line-height: 1.55; max-width: 720px; }
+  #inauguracao p b { font-weight: 600; color: var(--bronze); }
+</style>
+</head>
+<body>
+
+<section class="peca quadrado claro" id="perfil">
+  <img src="simbolo-colorido.svg" alt="">
+</section>
+
+<section class="peca post claro" id="chegamos">
+  <div class="moldura"></div>
+  <div class="rotulo">Mauá · SP</div>
+  <img src="logo-vertical-colorido.svg" alt="Studio La Rocha">
+  <div class="frase">Um espaço novo para cuidar de você.</div>
+  <div class="arroba">@STUDIOLAROCHA</div>
+</section>
+
+<section class="peca post escuro" id="historia">
+  <div class="moldura"></div>
+  <div class="rotulo">Nossa história</div>
+  <img src="simbolo-claro-transp.svg" alt="">
+  <h2>Duas mulheres,<br>uma história.</h2>
+  <p>Sandra e Amanda, mãe e filha, abrem juntas um espaço de beleza, saúde e bem-estar em Mauá.</p>
+  <div class="arroba">@STUDIOLAROCHA</div>
+</section>
+
+<section class="peca post claro" id="inauguracao">
+  <div class="moldura"></div>
+  <div class="rotulo">Vem aí</div>
+  <h2>Inauguração</h2>
+  <div class="script">em breve</div>
+  <div class="divisor"><span></span><img src="simbolo-colorido.svg" alt=""><span></span></div>
+  <p>Ative as notificações do <b>@studiolarocha</b> e saiba a data em primeira mão.</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Studio La Rocha · Foto de perfil</title>
+<style>
+  @font-face { font-family: "Cormorant"; src: url(cormorant.woff2) format("woff2"); font-weight: 300 700; }
+
+  :root {
+    --creme: #F7F1E8;
+    --ouro: #B08D57;
+    --tinta: #2B2622;
+    --escuro: #1F1A17;
+    --ouro-claro: #C9A468;
+    --marfim: #F4EBDD;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #888; }
+
+  .peca { position: relative; width: 1080px; height: 1080px; margin: 0 0 40px; overflow: hidden; }
+  .claro { background: var(--creme); }
+  .escuro { background: var(--escuro); }
+  .peca svg.arte { position: absolute; inset: 0; }
+
+  /* nome reto, embaixo do símbolo */
+  .reto { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .reto img { height: 500px; margin-top: -10px; }
+  .reto .nome { font-family: "Cormorant"; font-weight: 500; font-size: 64px; letter-spacing: .18em; padding-left: .18em; margin-top: 40px; color: var(--tinta); white-space: nowrap; }
+  .escuro.reto .nome { color: var(--marfim); }
+
+  /* nome em arco, dentro de um anel */
+  .arco img { position: absolute; height: 580px; left: 50%; top: 130px; transform: translateX(-50%); }
+  .arco text { font-family: "Cormorant"; font-weight: 600; font-size: 72px; letter-spacing: .16em; fill: var(--tinta); }
+  .escuro.arco text { fill: var(--marfim); }
+</style>
+</head>
+<body>
+
+<section class="peca claro reto" id="reto-claro">
+  <img src="simbolo-colorido.svg" alt="">
+  <div class="nome">STUDIO LA ROCHA</div>
+</section>
+
+<section class="peca escuro reto" id="reto-escuro">
+  <img src="simbolo-claro-transp.svg" alt="">
+  <div class="nome">STUDIO LA ROCHA</div>
+</section>
+
+<section class="peca claro arco" id="arco-claro">
+  <img src="simbolo-colorido.svg" alt="">
+  <svg class="arte" viewBox="0 0 1080 1080" width="1080" height="1080">
+    <circle cx="540" cy="540" r="492" fill="none" stroke="#B08D57" stroke-width="5"/>
+    <circle cx="540" cy="540" r="472" fill="none" stroke="#B08D57" stroke-width="2"/>
+    <path id="curva1" d="M 130 540 A 410 410 0 0 0 950 540" fill="none"/>
+    <text><textPath href="#curva1" startOffset="50%" text-anchor="middle">STUDIO LA ROCHA</textPath></text>
+  </svg>
+</section>
+
+<section class="peca escuro arco" id="arco-escuro">
+  <img src="simbolo-claro-transp.svg" alt="">
+  <svg class="arte" viewBox="0 0 1080 1080" width="1080" height="1080">
+    <circle cx="540" cy="540" r="492" fill="none" stroke="#C9A468" stroke-width="5"/>
+    <circle cx="540" cy="540" r="472" fill="none" stroke="#C9A468" stroke-width="2"/>
+    <path id="curva2" d="M 130 540 A 410 410 0 0 0 950 540" fill="none"/>
+    <text><textPath href="#curva2" startOffset="50%" text-anchor="middle">STUDIO LA ROCHA</textPath></text>
+  </svg>
+</section>
+
+</body>
+</html>

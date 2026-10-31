@@ -1,0 +1,135 @@
+STUDIO LA ROCHA · Instagram (@studiolarocha)
+=============================================
+Antes de postar: a Sandra aprova as imagens e as legendas por escrito (WhatsApp vale).
+Regra do nome: sempre "Studio La Rocha". Nunca Stúdio, Estudio ou La Rocha Studio.
+
+
+1. FOTO DE PERFIL
+-----------------
+Já trocada (versão com o nome em arco). Se quiser a mais legível: perfil-A-nome-reto-claro.png.
+
+
+2. NOME, BIO E LINK  (Editar perfil)
+------------------------------------
+Nome:
+  Studio La Rocha | Salão em Mauá
+
+Bio (145 de 150 caracteres; copie as 4 linhas):
+  Beleza, saúde e bem-estar ✨
+  Cabelo · Auriculoterapia · Limpeza de pele
+  Por @sandraaparecida5566 e @amandarochaat
+  📍 Mauá - SP · Agende pelo link 👇
+
+Link: a página de links do salão (endereço sai assim que ela for publicada).
+      Enquanto isso, pode usar o WhatsApp direto: https://wa.me/5511967682546
+      (só depois de a Sandra confirmar que esse é o número oficial do salão)
+
+Conta profissional (grátis, 2 minutos):
+  Configurações > Tipo de conta e ferramentas > Mudar para conta profissional
+  > Empresa > categoria "Salão de beleza" > ligar "Exibir categoria no perfil"
+  > Opções de contato: WhatsApp (o número oficial)
+  Não conectar ao Facebook pessoal de ninguém.
+
+
+3. OS 6 PRIMEIROS POSTS
+-----------------------
+Postar na ordem dos números (1 primeiro, 6 por último), no mesmo dia, com alguns minutos entre um e outro.
+O perfil fica assim (veja simulacao-perfil-6-posts.png):
+
+  [ Beleza 01/03 ]   [ Saúde 02/03 ]       [ Agendar 03/03 ]
+  [ Chegamos ]       [ Nossa história ]    [ Inauguração ]
+
+Ao postar: tocar no ícone de recorte e escolher 4:5 (ou "Original") para a imagem não ser cortada.
+Desligar "Compartilhar no Facebook".
+Depois: fixar no topo os posts Beleza, Saúde e Agendar (três pontinhos > Fixar no perfil).
+
+
+--- 1: 1-postar-primeiro-inauguracao.png ---
+
+Estamos preparando cada detalhe do Studio La Rocha, um espaço de beleza, saúde e bem-estar aqui em Mauá. ✨
+
+A inauguração está chegando! Toque no sininho aqui no perfil e ative as notificações para saber a data em primeira mão.
+
+#studiolarocha #maua #vilanovamaua #salaodebeleza #salaodebelezamaua #inauguracao
+
+
+--- 2: 2-postar-segundo-nossa-historia.png ---
+
+Duas mulheres, uma história.
+
+O Studio La Rocha nasce da Sandra e da Amanda, mãe e filha, que decidiram construir juntas um lugar para cuidar de você com carinho, atenção e qualidade.
+
+A Sandra está à frente do salão. A Amanda (@amandarochaat) atende no espaço com auriculoterapia e limpeza de pele.
+
+Nos próximos dias, vamos mostrar o espaço e tudo o que preparamos para você. 🤍
+
+#studiolarocha #maua #maeefilha #belezaesaude #bemestar
+
+
+--- 3: 3-postar-terceiro-chegamos.png ---
+
+Chegamos, Mauá! 🤍
+
+Este é o Studio La Rocha: beleza, saúde e bem-estar num espaço feito com carinho, do jeito que a gente sempre sonhou.
+
+Siga o perfil e acompanhe: vem aí a data da inauguração, o nosso espaço e as profissionais que vão cuidar de você.
+
+📍 Mauá - SP
+
+#studiolarocha #maua #vilanovamaua #salaodebelezamaua #beleza #bemestar
+
+
+--- 4: 4-postar-quarto-agendar.png ---
+
+Agendar no Studio La Rocha é simples assim:
+
+1. Chame a gente no WhatsApp (o link está na bio)
+2. Escolha o dia e o horário
+3. Pague só no salão, no dia do atendimento
+
+Importante: nunca pedimos Pix ou sinal por mensagem. Se alguém pedir em nosso nome, não pague e fale com a gente pelo número oficial. 🤍
+
+#studiolarocha #maua #salaodebelezamaua #agendeja
+
+
+--- 5: 5-postar-quinto-saude.png ---
+
+Saúde também é cuidar de si. ✨
+
+No Studio La Rocha, a enfermeira Amanda Rocha (@amandarochaat · COREN-SP 617675) atende com auriculoterapia e limpeza de pele, com técnica, higiene e atenção de quem é da área da saúde.
+
+Atendimento exclusivo para mulheres. Os horários da Amanda estão no perfil dela.
+
+#studiolarocha #auriculoterapia #limpezadepele #enfermagem #maua
+
+
+--- 6: 6-postar-por-ultimo-beleza.png ---
+
+Beleza para os seus cabelos. ✨
+
+No Studio La Rocha, cada atendimento é feito com calma e cuidado, num espaço pensado para você se sentir em casa.
+
+Quer saber os serviços e valores? Chame a gente no WhatsApp pelo link da bio e monte o seu horário.
+
+#studiolarocha #cabelo #salaodebeleza #salaodebelezamaua #maua
+
+
+4. PEDIR AJUDA ÀS CONHECIDAS
+----------------------------
+Logo depois de postar:
+  - Sandra e Amanda repostam "Beleza" e "Saúde" no story, marcando @studiolarocha.
+  - Mandar no WhatsApp para família e clientes:
+    "Abrimos o Instagram do nosso salão! Segue lá e compartilha com quem mora em Mauá: instagram.com/studiolarocha 🤍"
+  - Responder todo comentário no mesmo dia.
+
+
+5. PRÓXIMOS POSTS (precisam de fotos reais)
+-------------------------------------------
+  - Foto da Sandra e da Amanda juntas no salão (a mais importante)
+  - O espaço: cadeiras, lavatório, maca, espelhos, de dia e com luz acesa
+  - Um vídeo curto, de 10 a 15 segundos, andando pelo salão
+  - Fotos de trabalhos de cabelo (só com autorização escrita da cliente)
+
+
+Arquivos-fonte: pasta "fonte" (posts.html, servicos.html, perfil.html e os exportar*.cjs geram os PNGs de novo).
+Desenvolvido por Kevin Laet

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Studio La Rocha · Posts do que o salão oferece</title>
+<style>
+  @font-face { font-family: "Cormorant"; src: url(cormorant.woff2) format("woff2"); font-weight: 300 700; }
+  @font-face { font-family: "Great Vibes"; src: url(greatvibes.woff2) format("woff2"); }
+  @font-face { font-family: "Montserrat"; src: url(montserrat.woff2) format("woff2"); font-weight: 100 900; }
+
+  :root {
+    --creme: #F7F1E8; --papel: #FFFCF7; --ouro: #B08D57; --ouro-c: #C9A468; --ouro-e: #8E6E3E;
+    --tinta: #2B2622; --tinta-2: #6A6058; --bronze: #9C7A45; --escuro: #1F1A17; --marfim: #F4EBDD;
+    --brilho: linear-gradient(100deg, #A8854F 0%, #D9BC86 38%, #F3E2BC 50%, #D9BC86 62%, #A8854F 100%);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #888; }
+
+  .post { position: relative; width: 1080px; height: 1350px; overflow: hidden; margin: 0 0 40px; padding: 110px 110px 0; font-family: "Montserrat"; isolation: isolate; }
+  .claro { background: var(--creme); color: var(--tinta); }
+  .escuro { background: var(--escuro); color: var(--marfim); }
+
+  /* luzes, grade de pontos e arcos finos */
+  .luz { position: absolute; border-radius: 50%; filter: blur(90px); z-index: -1; }
+  .claro .luz.a { width: 620px; height: 620px; background: #EBD6AC; top: -220px; right: -200px; opacity: .7; }
+  .claro .luz.b { width: 520px; height: 520px; background: #F1E2C5; bottom: -200px; left: -160px; opacity: .8; }
+  .escuro .luz.a { width: 620px; height: 620px; background: #5A4428; top: -240px; right: -220px; opacity: .55; }
+  .escuro .luz.b { width: 520px; height: 520px; background: #3A2C1B; bottom: -200px; left: -180px; opacity: .7; }
+  .pontos { position: absolute; inset: 0; z-index: -1; background-image: radial-gradient(rgba(176,141,87,.28) 1.4px, transparent 1.8px); background-size: 34px 34px; -webkit-mask-image: radial-gradient(ellipse 60% 45% at 85% 12%, #000 10%, transparent 75%); mask-image: radial-gradient(ellipse 60% 45% at 85% 12%, #000 10%, transparent 75%); }
+  .arco { position: absolute; z-index: -1; border-radius: 50%; border: 2px solid rgba(176,141,87,.35); }
+  .arco.um { width: 900px; height: 900px; right: -520px; top: -380px; }
+  .arco.dois { width: 1100px; height: 1100px; right: -640px; top: -480px; border-color: rgba(176,141,87,.18); }
+
+  /* topo: marca pequena e contador */
+  .topo { display: flex; align-items: center; justify-content: space-between; }
+  .mini { display: flex; align-items: center; gap: 16px; font-family: "Cormorant"; font-weight: 500; font-size: 26px; letter-spacing: .24em; }
+  .mini img { height: 54px; }
+  .contador { font-weight: 600; font-size: 20px; letter-spacing: .24em; color: var(--bronze); padding: 12px 20px; border-radius: 99px; border: 1.5px solid rgba(176,141,87,.4); }
+  .escuro .contador { color: var(--ouro-c); }
+
+  .rotulo { margin-top: 120px; font-weight: 600; font-size: 22px; letter-spacing: .4em; text-transform: uppercase; color: var(--bronze); }
+  .escuro .rotulo { color: var(--ouro-c); }
+  h2 { font-family: "Cormorant"; font-weight: 500; font-size: 168px; line-height: .95; margin-top: 18px; letter-spacing: .005em; }
+  .script { font-family: "Great Vibes"; font-size: 86px; line-height: 1.1; margin-top: 4px; background: var(--brilho); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .claro .script { background: linear-gradient(100deg, #8E6E3E, #B08D57 45%, #C9A468 60%, #8E6E3E); -webkit-background-clip: text; background-clip: text; }
+
+  /* cartões de vidro */
+  .cartoes { display: grid; gap: 24px; margin-top: 64px; }
+  .cartao { display: flex; align-items: center; gap: 32px; padding: 34px 38px; border-radius: 36px; }
+  .claro .cartao { background: rgba(255,252,247,.72); border: 1.5px solid rgba(176,141,87,.3); box-shadow: 0 20px 50px rgba(142,110,62,.12); }
+  .escuro .cartao { background: rgba(244,235,221,.06); border: 1.5px solid rgba(201,164,104,.3); box-shadow: 0 20px 50px rgba(0,0,0,.3); }
+  .ico { flex: none; width: 108px; height: 108px; border-radius: 30px; display: grid; place-items: center; }
+  .claro .ico { background: linear-gradient(145deg, #FFF8EC, #EFDDBC); box-shadow: inset 0 0 0 1.5px rgba(176,141,87,.3); }
+  .escuro .ico { background: linear-gradient(145deg, rgba(201,164,104,.28), rgba(201,164,104,.08)); box-shadow: inset 0 0 0 1.5px rgba(201,164,104,.4); }
+  .ico svg { width: 54px; height: 54px; }
+  .num { font-family: "Cormorant"; font-weight: 600; font-size: 60px; font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; line-height: 1; color: var(--ouro-c); }
+  .cartao h3 { font-weight: 700; font-size: 38px; line-height: 1.15; }
+  .cartao p { font-weight: 400; font-size: 27px; line-height: 1.45; margin-top: 8px; }
+  .claro .cartao p { color: var(--tinta-2); }
+  .escuro .cartao p { color: rgba(244,235,221,.72); }
+
+  /* rodapé */
+  .rodape { position: absolute; left: 110px; right: 110px; bottom: 96px; display: flex; align-items: center; justify-content: space-between; font-weight: 500; font-size: 22px; letter-spacing: .18em; }
+  .claro .rodape { color: var(--bronze); }
+  .escuro .rodape { color: var(--ouro-c); }
+  .rodape .chip { display: inline-flex; align-items: center; gap: 12px; padding: 14px 24px; border-radius: 99px; font-weight: 700; letter-spacing: .14em; font-size: 20px; }
+  .claro .rodape .chip { background: var(--escuro); color: var(--marfim); }
+  .escuro .rodape .chip { background: var(--brilho); color: var(--escuro); }
+  .rodape .chip svg { width: 22px; height: 22px; }
+
+  /* acento agudo desenhado: o da Cormorant é alto demais para leitura rápida */
+  .u { position: relative; display: inline-block; }
+  .agudo { position: absolute; left: 50%; top: .02em; width: .075em; height: .2em; background: currentColor; border-radius: .04em; transform: translateX(-10%) skewX(-38deg); }
+
+  /* post com 3 cartões: mais compacto para não encostar no rodapé */
+  #agendar .rotulo { margin-top: 90px; }
+  #agendar .cartoes { margin-top: 50px; gap: 20px; }
+  #agendar .cartao { padding: 26px 34px; }
+  #agendar .ico { width: 96px; height: 96px; }
+
+  .faisca { position: absolute; color: var(--ouro-c); }
+  .faisca svg { width: 100%; height: 100%; display: block; }
+</style>
+</head>
+<body>
+
+<!-- 1/3 · Beleza (escuro) -->
+<section class="post escuro" id="beleza">
+  <i class="luz a"></i><i class="luz b"></i><div class="pontos"></div><div class="arco um"></div><div class="arco dois"></div>
+  <span class="faisca" style="width:30px;height:30px;top:420px;right:150px"><svg viewBox="0 0 10 10"><path fill="currentColor" d="M5 0l1.2 3.8L10 5 6.2 6.2 5 10 3.8 6.2 0 5l3.8-1.2z"/></svg></span>
+  <span class="faisca" style="width:18px;height:18px;top:500px;right:230px;opacity:.6"><svg viewBox="0 0 10 10"><path fill="currentColor" d="M5 0l1.2 3.8L10 5 6.2 6.2 5 10 3.8 6.2 0 5l3.8-1.2z"/></svg></span>
+  <div class="topo"><div class="mini"><img src="simbolo-claro-transp.svg" alt="">STUDIO LA ROCHA</div><div class="contador">01 / 03</div></div>
+  <div class="rotulo">O que você encontra</div>
+  <h2>Beleza</h2>
+  <div class="script">para os seus cabelos</div>
+  <div class="cartoes">
+    <div class="cartao">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#E3C88F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="7" r="2.6"/><circle cx="6" cy="17" r="2.6"/><path d="M8.2 8.4L20 16M8.2 15.6L20 8"/></svg></div>
+      <div><h3>Cabelo</h3><p>Cuidado com os seus fios, num espaço pensado para você se sentir em casa.</p></div>
+    </div>
+    <div class="cartao">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#E3C88F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.7 1.8 1.8.7-1.8.7L19 21l-.7-1.8-1.8-.7 1.8-.7z"/></svg></div>
+      <div><h3>Serviços e valores</h3><p>Fale com a gente no WhatsApp e monte o seu horário.</p></div>
+    </div>
+  </div>
+  <div class="rodape"><span>@STUDIOLAROCHA</span><span class="chip">LINK NA BIO</span></div>
+</section>
+
+<!-- 2/3 · Saúde (claro) -->
+<section class="post claro" id="saude">
+  <i class="luz a"></i><i class="luz b"></i><div class="pontos"></div><div class="arco um"></div><div class="arco dois"></div>
+  <span class="faisca" style="width:30px;height:30px;top:420px;right:150px"><svg viewBox="0 0 10 10"><path fill="currentColor" d="M5 0l1.2 3.8L10 5 6.2 6.2 5 10 3.8 6.2 0 5l3.8-1.2z"/></svg></span>
+  <div class="topo"><div class="mini"><img src="simbolo-colorido.svg" alt="">STUDIO LA ROCHA</div><div class="contador">02 / 03</div></div>
+  <div class="rotulo">O que você encontra</div>
+  <h2 aria-label="Saúde">Sa<span class="u">u<i class="agudo"></i></span>de</h2>
+  <div class="script">com a enfermeira Amanda</div>
+  <div class="cartoes">
+    <div class="cartao">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#9C7A45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 18c-2-2-3-4-3-7a7 7 0 0 1 14 0c0 3-2.5 4.5-4 6.5S13.5 21 11 21c-1.5 0-2.5-1-3-3z"/><path d="M9 11a3 3 0 0 1 6 0c0 2-2 2.5-2 4"/></svg></div>
+      <div><h3>Auriculoterapia</h3><p>Técnica feita em pontos da orelha, com atendimento de enfermagem.</p></div>
+    </div>
+    <div class="cartao">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#9C7A45" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4 6 7 6 10.5A6 6 0 0 1 6 13.5C6 10 9 7 12 3z"/><path d="M9.5 14.5a2.6 2.6 0 0 0 2.5 2"/></svg></div>
+      <div><h3>Limpeza de pele</h3><p>Um momento de cuidado com a sua pele, com técnica e higiene.</p></div>
+    </div>
+  </div>
+  <div class="rodape"><span>SÓ MULHERES · COREN-SP 617675</span><span class="chip">@AMANDAROCHAAT</span></div>
+</section>
+
+<!-- 3/3 · Como agendar (escuro) -->
+<section class="post escuro" id="agendar">
+  <i class="luz a"></i><i class="luz b"></i><div class="pontos"></div><div class="arco um"></div><div class="arco dois"></div>
+  <span class="faisca" style="width:30px;height:30px;top:420px;right:150px"><svg viewBox="0 0 10 10"><path fill="currentColor" d="M5 0l1.2 3.8L10 5 6.2 6.2 5 10 3.8 6.2 0 5l3.8-1.2z"/></svg></span>
+  <span class="faisca" style="width:18px;height:18px;top:500px;right:230px;opacity:.6"><svg viewBox="0 0 10 10"><path fill="currentColor" d="M5 0l1.2 3.8L10 5 6.2 6.2 5 10 3.8 6.2 0 5l3.8-1.2z"/></svg></span>
+  <div class="topo"><div class="mini"><img src="simbolo-claro-transp.svg" alt="">STUDIO LA ROCHA</div><div class="contador">03 / 03</div></div>
+  <div class="rotulo">Bem-estar começa aqui</div>
+  <h2>Agendar</h2>
+  <div class="script">é simples assim</div>
+  <div class="cartoes">
+    <div class="cartao"><div class="ico"><span class="num">1</span></div><div><h3>Chame no WhatsApp</h3><p>O link está na bio do perfil.</p></div></div>
+    <div class="cartao"><div class="ico"><span class="num">2</span></div><div><h3>Escolha dia e horário</h3><p>A gente confirma tudo com você.</p></div></div>
+    <div class="cartao"><div class="ico"><span class="num">3</span></div><div><h3>Pague só no salão</h3><p>Nunca pedimos Pix por mensagem.</p></div></div>
+  </div>
+  <div class="rodape"><span>@STUDIOLAROCHA</span><span class="chip">LINK NA BIO</span></div>
+</section>
+
+</body>
+</html>
