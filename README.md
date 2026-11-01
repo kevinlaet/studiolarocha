@@ -5,6 +5,7 @@ Página de links do salão (para a bio do Instagram) e materiais de divulgação
 | Pasta | O que é |
 |---|---|
 | `links/` | Página de links da bio: WhatsApp do salão, serviços, profissionais, salvar contato e compartilhar |
+| `profissionais/` | Página "Nossas profissionais": Sandra e Amanda, com resumo, serviços e botões de agendar. As fotos entram em `img/sandra.jpg` e `img/amanda.jpg` (veja os comentários no HTML) |
 | `index.html` | Leva direto para `links/` |
 | `img/`, `fonts/` | Símbolo do logo (opção C) e as letras da marca |
 | `instagram/` | Foto de perfil, os 6 primeiros posts, legendas e bio (`LEIA-ME.txt`); a pasta `fonte/` gera os PNGs de novo |
