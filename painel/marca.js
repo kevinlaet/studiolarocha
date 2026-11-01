@@ -4,6 +4,7 @@ window.PAINEL = {
   // onde a cliente agenda: o botão "Visualizar agenda como cliente" e os links enviados levam para cá
   agenda: '../agenda/',
   arquivoImagem: 'horarios-studio-la-rocha.png',
+  arquivoStory: 'story-horarios-livres-studio-la-rocha.png',
   imagem: {
     logo: '../img/simbolo.svg', titulo: 'Studio La Rocha', sub: 'BELEZA  ·  SAÚDE  ·  BEM-ESTAR', rodape: 'PAGAMENTO SÓ NO SALÃO',
     fundo: ['#3A2F27', '#2B2622', '#1F1A17'], destaque: '#C9A468', claro: '#F4EBDD', papel: '#F7F1E8', tinta: '#2B2622', pilula: '#2B2622',
