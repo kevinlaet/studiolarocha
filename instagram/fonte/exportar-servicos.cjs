@@ -11,7 +11,7 @@ const pecas = [
 
 (async () => {
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 1200, height: 1400 } });
+  const page = await browser.newPage({ viewport: { width: 1200, height: 1400 }, deviceScaleFactor: 2 });
   await page.goto('file://' + path.join(__dirname, 'servicos.html'));
   await page.evaluate(() => document.fonts.ready);
   for (const [id, arquivo] of pecas) {
