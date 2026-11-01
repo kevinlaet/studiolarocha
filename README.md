@@ -5,10 +5,38 @@ Página de links do salão (para a bio do Instagram) e materiais de divulgação
 | Pasta | O que é |
 |---|---|
 | `links/` | Página de links da bio: WhatsApp do salão, serviços, profissionais, salvar contato e compartilhar |
+| `agenda/` | Agenda do salão: a cliente escolhe a profissional, o serviço, o dia e a hora, e reserva. `?p=sandra` já abre numa profissional; os links que o painel envia (`?dias=…&n=…&s=…`) mostram só os dias escolhidos |
+| `painel/` | Painel do salão (Sandra e parceiras). É o painel da Amanda com a cara do salão: **não edite** `index.html`, `painel.js` nem o manifesto; o que é só do salão fica em `painel/marca.js` |
+| `config.js` | Endereço do banco (Supabase, só a chave pública) e o WhatsApp do salão |
 | `profissionais/` | Página "Nossas profissionais": Sandra e Amanda, com resumo, serviços e botões de agendar. As fotos entram em `img/sandra.jpg` e `img/amanda.jpg` (veja os comentários no HTML) |
 | `index.html` | Leva direto para `links/` |
 | `img/`, `fonts/` | Símbolo do logo (opção C) e as letras da marca |
 | `instagram/` | Foto de perfil, os 6 primeiros posts, legendas e bio (`LEIA-ME.txt`); a pasta `fonte/` gera os PNGs de novo |
+
+## Agenda única: salão e Amanda no mesmo banco
+
+A agenda do salão usa o **mesmo banco** da agenda da Amanda (Supabase). O que a Amanda muda no painel dela aparece na hora aqui, e vice-versa.
+
+- **Sócias** (Amanda e Sandra) veem e mexem na agenda de todas. No painel, a chave **Só a minha agenda / Todas as profissionais** troca a visão.
+- **Parceiras** veem e mexem só na própria agenda, clientes e números. Quem garante isso é o banco, não a tela.
+- **A maca trava entre elas:** um serviço marcado como "usa a maca" impede outra profissional de usar a maca no mesmo horário. O mesmo vale para as cadeiras e a mesa de unhas.
+- **Visualizar agenda como cliente:** botão no painel que abre a página `agenda/` como a cliente vê.
+
+### Cadastrar uma profissional (a Sandra ou uma parceira)
+
+1. No painel, uma sócia abre **Mais › Profissionais**, escreve o nome e o e-mail e escolhe **Sócia** ou **Parceira**. A Sandra já vem cadastrada; falta só o e-mail dela.
+2. No Supabase: Authentication › Users › Add user › Create new user, com **o mesmo e-mail** e uma senha provisória, marcando **Auto Confirm User**.
+3. Ela entra em `…/studiolarocha/painel/`, troca a senha em Mais › Minha conta e cadastra os serviços dela em Mais › Serviços e preços (com o que cada um usa do salão).
+
+### Atualizar o painel do salão
+
+O painel é o da Amanda (repositório AMANDA-ROCHA-AT, pasta `admin/`). Depois de mudar o painel lá:
+
+```
+node ferramentas/painel.mjs ../AMANDA-ROCHA-AT
+```
+
+`node ferramentas/painel.mjs ../AMANDA-ROCHA-AT --conferir` só confere se a cópia está igual.
 
 ## Colocar no ar (GitHub Pages)
 

@@ -177,7 +177,7 @@ h1.pagina{font-family:Cormorant,Georgia,serif;font-weight:500;font-size:clamp(34
       <p class="bio">Amanda Rocha é enfermeira (COREN-SP 617675) e trabalha com saúde mental. Atende só mulheres, com auriculoterapia e limpeza de pele, unindo a biossegurança da enfermagem a um atendimento acolhedor e sem pressa, para você sair mais leve e cuidada.</p>
       <div class="chips"><span>Auriculoterapia</span><span>Limpeza de pele</span></div>
       <div class="botoes">
-        <a class="forte" href="https://amandarochabemestar.com.br/#agendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Ver horários da Amanda</a>
+        <a class="forte" href="../agenda/?p=amanda" data-agenda><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Ver horários da Amanda</a>
         <a class="leve" href="https://www.instagram.com/amandarochaat/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>Instagram da Amanda</a>
       </div>
     </article>
@@ -199,6 +199,7 @@ h1.pagina{font-family:Cormorant,Georgia,serif;font-weight:500;font-size:clamp(34
   const sandra = document.querySelector('a[data-wa="sandra"]');
   if (sandra) sandra.href = 'https://wa.me/5511967682546?text=' + encodeURIComponent(`Oi, Sandra! 🤍 Vim pelo ${origem} e queria agendar um horário com você.`);
   if (chave) document.querySelector('.voltar').href = '../links/?de=' + chave;
+  if (chave) document.querySelectorAll('a[data-agenda]').forEach(a => { a.href += '&de=' + chave; });
 })();
 </script>
 </body>
