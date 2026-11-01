@@ -27,10 +27,12 @@ html = troca(html, '<h1 id="cabNome">Amanda Rocha</h1>', '<h1 id="cabNome">Studi
 html = troca(html, '<b>Bem-vinda, Amanda!</b>', '<b>Bem-vinda!</b>');
 html = troca(html, '<script src="../agenda.js"></script>', '<script src="marca.js"></script>');
 // cores do salão: dourado e marrom quase preto (as variáveis mantêm os nomes do painel da Amanda)
+// os tons verde-azulados fixos do painel da Amanda viram os beges do salão (o verde de "confirmado" é de estado e fica)
+const BEGES = { '#E9F4F1': '#F1E6D3', '#EEF7F5': '#F7F1E8', '#BFD9D4': '#E3D3BC', '#CFE5E0': '#E8D9C0', '#F1F8F6': '#F7F1E8', '#D5E9E5': '#EADBC3' };
+for (const [de, para] of Object.entries(BEGES)) html = html.split(de).join(para);
 html = troca(html, '</style>', `/* Studio La Rocha */
 :root{--teal:#2B2622;--teal-d:#1F1A17;--peach:#C9A468;--peach-l:#F4EBDD;--cream:#F7F1E8;--sand:#EFE5D6;--ink:#2B2622;--muted:#6A6058;--line:#E3D3BC}
 header h1{font-family:Cormorant,Georgia,serif;font-weight:600;font-size:20px;letter-spacing:.16em;text-transform:uppercase;color:var(--peach)}
-.abas button[aria-current=page]{background:#F1E6D3}
 </style>`);
 html = troca(html, '<!doctype html>', '<!doctype html>\n<!-- Gerado por ferramentas/painel.mjs a partir do painel da Amanda. Não edite aqui: rode o script de novo. -->');
 

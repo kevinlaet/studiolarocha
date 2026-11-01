@@ -191,7 +191,7 @@ h1.pagina{font-family:Cormorant,Georgia,serif;font-weight:500;font-size:clamp(34
 <script>
 // Mesma origem da página de links: ?de=... ou o app em que abriu.
 (() => {
-  const ORIGENS = { instagram: 'Instagram do Studio La Rocha', facebook: 'Facebook do Studio La Rocha', google: 'perfil do Studio La Rocha no Google', cartao: 'cartão do Studio La Rocha', cartaz: 'cartaz do Studio La Rocha', espelho: 'QR code do espelho do Studio La Rocha', amanda: 'site da Amanda Rocha' };
+  const ORIGENS = { instagram: 'Instagram do Studio La Rocha', facebook: 'Facebook do Studio La Rocha', google: 'perfil do Studio La Rocha no Google', whatsapp: 'perfil do Studio La Rocha no WhatsApp', cartao: 'cartão do Studio La Rocha', cartaz: 'cartaz do Studio La Rocha', espelho: 'QR code do espelho do Studio La Rocha', amanda: 'site da Amanda Rocha' };
   const de = (new URLSearchParams(location.search).get('de') || '').toLowerCase();
   const ua = navigator.userAgent;
   const chave = ORIGENS[de] ? de : /Instagram/i.test(ua) ? 'instagram' : /FBAN|FBAV/.test(ua) ? 'facebook' : '';

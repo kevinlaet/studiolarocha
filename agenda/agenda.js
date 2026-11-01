@@ -3,7 +3,7 @@
 (function(){
   var C=window.SUPABASE||{},Z=(window.SALAO&&SALAO.whatsapp)||'5511967682546',$=function(i){return document.getElementById(i)};
   var q=new URLSearchParams(location.search);
-  var ORIGENS={instagram:'Instagram do Studio La Rocha',facebook:'Facebook do Studio La Rocha',google:'perfil do Studio La Rocha no Google',cartao:'cartão do Studio La Rocha',cartaz:'cartaz do Studio La Rocha',espelho:'QR code do espelho do Studio La Rocha',amanda:'site da Amanda Rocha'};
+  var ORIGENS={instagram:'Instagram do Studio La Rocha',facebook:'Facebook do Studio La Rocha',google:'perfil do Studio La Rocha no Google',whatsapp:'perfil do Studio La Rocha no WhatsApp',cartao:'cartão do Studio La Rocha',cartaz:'cartaz do Studio La Rocha',espelho:'QR code do espelho do Studio La Rocha',amanda:'site da Amanda Rocha'};
   var de=(q.get('de')||'').toLowerCase(),ua=navigator.userAgent;
   var chave=ORIGENS[de]?de:/Instagram/i.test(ua)?'instagram':/FBAN|FBAV/.test(ua)?'facebook':'';
   var origem=ORIGENS[chave]||'site do Studio La Rocha';

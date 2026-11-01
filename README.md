@@ -11,6 +11,7 @@ Página de links do salão (para a bio do Instagram) e materiais de divulgação
 | `profissionais/` | Página "Nossas profissionais": Sandra e Amanda, com resumo, serviços e botões de agendar. As fotos entram em `img/sandra.jpg` e `img/amanda.jpg` (veja os comentários no HTML) |
 | `index.html` | Leva direto para `links/` |
 | `img/`, `fonts/` | Símbolo do logo (opção C) e as letras da marca |
+| `whatsapp/` | Pacote do WhatsApp Business: perfil, saudação, ausência, respostas rápidas, etiquetas e catálogo (o que falta é preenchido pela Sandra) |
 | `instagram/` | Foto de perfil, os 6 primeiros posts, legendas e bio (`LEIA-ME.txt`); a pasta `fonte/` gera os PNGs de novo |
 
 ## Agenda única: salão e Amanda no mesmo banco
@@ -54,6 +55,7 @@ Os botões do WhatsApp já abrem com a mensagem escrita, dizendo a origem ("Vim 
 | Cartaz (QR) | `…/links/?de=cartaz` |
 | Espelho do salão (QR) | `…/links/?de=espelho` |
 | Perfil no Google | `…/links/?de=google` |
+| Perfil do WhatsApp Business | `…/links/?de=whatsapp` |
 | Site da Amanda | `…/links/?de=amanda` |
 
 Sem `?de=`, a página reconhece sozinha quando abre dentro do Instagram ou do Facebook; nos outros casos escreve "Vim pelo site do Studio La Rocha". Novas origens e textos ficam no `<script>` de `links/index.html` (`ORIGENS` e `MENSAGENS`).

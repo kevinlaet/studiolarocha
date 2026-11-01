@@ -20,7 +20,7 @@
 @font-face{font-family:'Montserrat';src:url(../fonts/montserrat-sub.woff2) format('woff2');font-weight:400 800;font-display:swap}
 /* Painel de uso diário, no celular: uma coluna, ações grandes, cores de estado (livre, pedido, confirmado). */
 :root{--teal:#0B5F59;--teal-d:#053F3A;--peach:#F5C59D;--peach-l:#FBE3CE;--cream:#FFF8F1;--sand:#F7EBDF;--ink:#16302C;--muted:#55706B;--line:#E7D6C6;
-  --ok:#1B8A4B;--ok-bg:#E6F4EC;--warn:#B5651D;--warn-bg:#FFF3E5;--bad:#B3392F;--bad-bg:#FDECEA;--livre:#BFD9D4;--livre-bg:#EEF7F5;color-scheme:light}
+  --ok:#1B8A4B;--ok-bg:#E6F4EC;--warn:#B5651D;--warn-bg:#FFF3E5;--bad:#B3392F;--bad-bg:#FDECEA;--livre:#E3D3BC;--livre-bg:#F7F1E8;color-scheme:light}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:16px;line-height:1.5;color:var(--ink);background:var(--cream);min-height:100vh;-webkit-text-size-adjust:100%}
 button,input,select{font:inherit;color:inherit}
@@ -53,7 +53,7 @@ input:focus,select:focus{border-color:var(--teal)}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{min-height:44px;min-width:68px;padding:8px 12px;border-radius:12px;border:2px solid var(--line);background:#fff;font-weight:700}
-.chip[aria-pressed=true]{background:#E9F4F1;border-color:var(--teal);color:var(--teal-d)}
+.chip[aria-pressed=true]{background:#F1E6D3;border-color:var(--teal);color:var(--teal-d)}
 .extra{display:grid;grid-template-columns:1fr auto;gap:10px}
 .extra .btn{width:auto}
 .previa{margin-top:14px;padding:12px 14px;border-radius:14px;background:var(--sand);font-size:15px}
@@ -132,7 +132,7 @@ label.check input{width:22px;height:22px;accent-color:var(--teal)}
 .abas{position:fixed;left:0;right:0;bottom:0;z-index:15;display:grid;grid-template-columns:repeat(4,1fr);gap:4px;background:#fff;border-top:1px solid var(--line);padding:6px 8px calc(6px + env(safe-area-inset-bottom));box-shadow:0 -8px 24px rgba(11,95,89,.08)}
 .abas button{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:56px;border:0;border-radius:14px;background:none;font-weight:700;font-size:12px;color:var(--muted)}
 .abas svg{width:24px;height:24px}
-.abas button[aria-current=page]{background:#E9F4F1;color:var(--teal-d)}
+.abas button[aria-current=page]{background:#F1E6D3;color:var(--teal-d)}
 .nb{position:absolute;top:4px;right:calc(50% - 22px);min-width:20px;height:20px;padding:0 6px;border-radius:99px;background:var(--warn);color:#fff;font-style:normal;font-size:12px;font-weight:800;line-height:20px}
 .aba-topo{margin-top:18px}
 .aba-t{margin:0!important;font-size:24px!important}
@@ -168,7 +168,7 @@ label.check input{width:22px;height:22px;accent-color:var(--teal)}
 .lista{margin-top:16px;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
 .lista button{display:flex;align-items:center;gap:14px;width:100%;padding:14px 16px;min-height:72px;background:none;border:0;border-top:1px solid var(--line);text-align:left}
 .lista button:first-child{border-top:0}
-.li-ic{flex:0 0 42px;height:42px;border-radius:12px;background:#E9F4F1;color:var(--teal);display:grid;place-items:center}
+.li-ic{flex:0 0 42px;height:42px;border-radius:12px;background:#F1E6D3;color:var(--teal);display:grid;place-items:center}
 .li-ic svg{width:22px;height:22px}
 .li-tx{flex:1;min-width:0;display:grid;gap:1px}
 .li-tx b{font-size:16px}.li-tx small{font-size:13px;color:var(--muted);line-height:1.35}
@@ -256,7 +256,7 @@ input[type=date]::-webkit-date-and-time-value,input[type=time]::-webkit-date-and
 [hidden]{display:none!important}
 @media (prefers-reduced-motion:no-preference){.sheet{animation:sobe .18s ease-out}.toast{animation:sobe .18s ease-out}@keyframes sobe{from{transform:translateY(24px);opacity:0}}}
 /* seus números: faturamento do mês (número grande), atendimentos e barra da meta */
-.num{margin-top:14px;border-color:#CFE5E0;background:linear-gradient(160deg,#fff 40%,#F1F8F6)}
+.num{margin-top:14px;border-color:#E8D9C0;background:linear-gradient(160deg,#fff 40%,#F7F1E8)}
 .num-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .num-l{font-size:14px;font-weight:700;color:var(--muted)}
 .olho{flex:none;width:44px;height:44px;border-radius:12px;border:1.5px solid var(--line);background:#fff;color:var(--teal);display:grid;place-items:center}
@@ -264,7 +264,7 @@ input[type=date]::-webkit-date-and-time-value,input[type=time]::-webkit-date-and
 .num-v{font-size:clamp(36px,12vw,48px);font-weight:700;line-height:1.1;letter-spacing:-.5px;color:var(--teal-d);margin-top:2px;overflow-wrap:anywhere}
 .num-s{font-size:15px;margin-top:2px}
 .num-s b{font-weight:800}
-.meter{height:10px;border-radius:99px;background:#D5E9E5;margin-top:14px;overflow:hidden}
+.meter{height:10px;border-radius:99px;background:#EADBC3;margin-top:14px;overflow:hidden}
 .meter i{display:block;height:100%;border-radius:99px;background:var(--teal)}
 .meter.ok i{background:var(--ok)}
 .num-m{font-size:14.5px;font-weight:600;margin-top:8px}
@@ -305,7 +305,6 @@ input[type=date]::-webkit-date-and-time-value,input[type=time]::-webkit-date-and
 /* Studio La Rocha */
 :root{--teal:#2B2622;--teal-d:#1F1A17;--peach:#C9A468;--peach-l:#F4EBDD;--cream:#F7F1E8;--sand:#EFE5D6;--ink:#2B2622;--muted:#6A6058;--line:#E3D3BC}
 header h1{font-family:Cormorant,Georgia,serif;font-weight:600;font-size:20px;letter-spacing:.16em;text-transform:uppercase;color:var(--peach)}
-.abas button[aria-current=page]{background:#F1E6D3}
 </style>
 </head>
 <body>

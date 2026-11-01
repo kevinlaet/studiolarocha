@@ -1,0 +1,119 @@
+STUDIO LA ROCHA · WhatsApp Business
+===================================
+Número do salão: (11) 96768-2546 (da Sandra, virando WhatsApp Business: o número não muda).
+Tudo entre [colchetes] a Sandra precisa preencher. Nada aqui foi inventado.
+
+
+1. ANTES DE CONVERTER (Sandra, 10 minutos)
+------------------------------------------
+- Faça o backup das conversas: WhatsApp > Configurações > Conversas > Backup.
+- Atenção: ao converter, as conversas pessoais (família, amigas) vão junto para o app
+  Business, porque o número é o mesmo. Se preferir separar, o ideal é um chip só do salão.
+  Se for usar o mesmo número, tudo bem: é só saber que as duas coisas ficam juntas.
+- Baixe o app "WhatsApp Business" (ícone verde com a letra B), abra com o mesmo número e
+  siga os passos. O app oferece trazer as conversas.
+- Depois de converter, o link wa.me/5511967682546 continua funcionando igual.
+
+
+2. PERFIL DA EMPRESA (Configurações > Ferramentas comerciais > Perfil da empresa)
+---------------------------------------------------------------------------------
+Nome:        Studio La Rocha
+Categoria:   Salão de beleza
+Foto:        o arquivo perfil-A-nome-reto-claro.png (pasta instagram)
+Descrição:   Beleza, saúde e bem-estar em Mauá. Cabelo, unhas, auriculoterapia e limpeza
+             de pele. Agende pelo link e pague só no salão.
+Endereço:    [endereço oficial, depois de confirmado]
+Horário:     [dia a dia, depois de definido]
+Site:        https://kevinlaet.github.io/studiolarocha/links/?de=whatsapp
+Instagram:   instagram.com/studiolarocha
+
+
+3. MENSAGEM DE SAUDAÇÃO (Ferramentas comerciais > Mensagem de saudação)
+-----------------------------------------------------------------------
+Oi! 🤍 Que bom ter você aqui no Studio La Rocha. Já já alguém responde.
+Se preferir, veja os horários livres e agende sozinha:
+https://kevinlaet.github.io/studiolarocha/agenda/?de=whatsapp
+
+(Enviar para: novos contatos e quem não escreve há 14 dias.)
+
+
+4. MENSAGEM DE AUSÊNCIA
+-----------------------
+Oi! Agora estamos atendendo e não conseguimos responder na hora. 🤍
+Assim que possível, a gente responde. Para agendar sem esperar:
+https://kevinlaet.github.io/studiolarocha/agenda/?de=whatsapp
+
+(Enviar: fora do horário de funcionamento. Marque o horário em Horário comercial.)
+
+
+5. RESPOSTAS RÁPIDAS (Ferramentas comerciais > Respostas rápidas)
+-----------------------------------------------------------------
+Digite a barra "/" e o atalho, e a mensagem aparece pronta.
+
+/agendar
+Para agendar, é só escolher o dia e o horário aqui, no nosso link: 🤍
+https://kevinlaet.github.io/studiolarocha/agenda/?de=whatsapp
+Se preferir, me diga o serviço e o dia que você quer, que eu vejo para você.
+
+/endereco
+Estamos em [endereço oficial]. [Ponto de referência]. 📍
+Como chegar: [link do Google Maps, depois que o Perfil da Empresa estiver no ar]
+
+/horario
+Atendemos [dias e horários]. Para ver os horários livres: https://kevinlaet.github.io/studiolarocha/agenda/?de=whatsapp
+
+/precos
+[Serviço]: [preço] · [duração]
+[Serviço]: [preço] · [duração]
+O pagamento é feito no salão, no dia do atendimento.
+
+/pagamento
+O pagamento é sempre feito no salão, no dia. Nunca pedimos Pix ou sinal por mensagem.
+Se alguém pedir em nosso nome, não pague e fale com a gente por aqui. 🤍
+
+/confirmado
+Oi, [nome]! Seu horário está confirmado: [dia, hora] · [serviço].
+O pagamento é feito no salão. Qualquer coisa, é só chamar. Até lá! 🤍
+
+/lembrete
+Oi, [nome]! Passando para lembrar do seu horário amanhã, [hora] · [serviço]. Te espero! 🤍
+Se precisar remarcar, é só me avisar por aqui.
+
+/remarcar
+Sem problema! Me diga o melhor dia e horário, ou escolha aqui: https://kevinlaet.github.io/studiolarocha/agenda/?de=whatsapp
+
+/obrigada
+Obrigada por vir, [nome]! 🤍 Foi um prazer. Se gostou, uma avaliação no Google ajuda muito o salão:
+[link de avaliação do Google, depois que o Perfil da Empresa estiver no ar]
+
+/aluguel
+Oi! Temos cadeira, maca e mesa de unhas para profissionais de beleza. Para conversar sobre
+o espaço, me conte: seu serviço, os dias e horários que você precisa e há quanto tempo atua. 🤍
+(Valores e regras: [definir com a Sandra e o contador])
+
+
+6. ETIQUETAS (Ferramentas comerciais > Etiquetas)
+-------------------------------------------------
+Nova cliente · Agendada · Pós-atendimento · Aniversariante · Parceira (aluguel)
+Dica: ao salvar uma cliente antiga, marque como "Agendada" ou "Pós-atendimento".
+Com as etiquetas dá para mandar uma novidade só para quem você escolher (Lista de transmissão).
+
+
+7. CATÁLOGO (Ferramentas comerciais > Catálogo)
+-----------------------------------------------
+Um item para cada serviço, com foto, preço e descrição curta:
+- Cabelo (corte e coloração): [preço]
+- Unhas (manicure): [preço]
+- Auriculoterapia (com a enfermeira Amanda Rocha): [preço]
+- Limpeza de pele (com a enfermeira Amanda Rocha): [preço]
+Só coloque preço que a Sandra e a Amanda tiverem definido.
+(Sobre promessa de resultado em serviços de saúde: não colocar, regra do COFEN.)
+
+
+8. LINKS PARA CADA LUGAR (a origem da cliente aparece na mensagem)
+-----------------------------------------------------------------
+Bio do Instagram:   https://kevinlaet.github.io/studiolarocha/links/?de=instagram
+WhatsApp (perfil):  https://kevinlaet.github.io/studiolarocha/links/?de=whatsapp
+Google:             https://kevinlaet.github.io/studiolarocha/links/?de=google
+Cartão de visita:   https://kevinlaet.github.io/studiolarocha/links/?de=cartao
+Cartaz / espelho:   .../links/?de=cartaz   ·   .../links/?de=espelho

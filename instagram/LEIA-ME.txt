@@ -114,6 +114,17 @@ Quer saber os horários e valores? Chame a gente no WhatsApp pelo link da bio. �
 #studiolarocha #cabelo #manicure #unhas #salaodebelezamaua #maua
 
 
+3b. DESTAQUES (as bolinhas abaixo da bio)
+-----------------------------------------
+Pasta capas-destaques: 7 capas douradas (1 Serviços, 2 Preços, 3 Como chegar, 4 Agendar,
+5 Antes e depois, 6 Equipe, 7 Regras). Para cada uma:
+  Perfil > + (Novo) > Destaque > escolher os stories > Avançar > Editar capa > Escolher da galeria
+  > a capa > escrever o nome do destaque (o mesmo da pasta).
+Só crie "Preços" e "Como chegar" depois de a Sandra confirmar os valores e o endereço.
+Os links da bio e do WhatsApp têm origens diferentes (?de=instagram, ?de=whatsapp): veja o
+arquivo whatsapp/LEIA-ME.txt no repositório do salão.
+
+
 4. PEDIR AJUDA ÀS CONHECIDAS
 ----------------------------
 Logo depois de postar:
