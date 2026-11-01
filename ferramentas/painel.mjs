@@ -30,6 +30,7 @@ html = troca(html, '<script src="../agenda.js"></script>', '<script src="marca.j
 html = troca(html, '</style>', `/* Studio La Rocha */
 :root{--teal:#2B2622;--teal-d:#1F1A17;--peach:#C9A468;--peach-l:#F4EBDD;--cream:#F7F1E8;--sand:#EFE5D6;--ink:#2B2622;--muted:#6A6058;--line:#E3D3BC}
 header h1{font-family:Cormorant,Georgia,serif;font-weight:600;font-size:20px;letter-spacing:.16em;text-transform:uppercase;color:var(--peach)}
+.abas button[aria-current=page]{background:#F1E6D3}
 </style>`);
 html = troca(html, '<!doctype html>', '<!doctype html>\n<!-- Gerado por ferramentas/painel.mjs a partir do painel da Amanda. Não edite aqui: rode o script de novo. -->');
 
