@@ -176,10 +176,10 @@ body[data-modo="info"] [data-so]:not([data-so~="info"]),body[data-modo="online"]
         <div class="escolhe" data-so="whatsapp">
           <span class="pergunta">O que você precisa com a Sandra?</span>
           <div class="opcoes">
-            <a class="zap" href="https://wa.me/5511967682546" data-zap="Sandra" data-servico="um corte de cabelo">Corte</a>
-            <a class="zap" href="https://wa.me/5511967682546" data-zap="Sandra" data-servico="uma coloração">Coloração</a>
-            <a class="zap" href="https://wa.me/5511967682546" data-zap="Sandra" data-servico="manicure">Manicure</a>
-            <a href="https://wa.me/5511967682546" data-zap="Sandra" data-servico="">Ainda não sei</a>
+            <a class="zap" href="#" data-zap="Sandra" data-servico="um corte de cabelo">Corte</a>
+            <a class="zap" href="#" data-zap="Sandra" data-servico="uma coloração">Coloração</a>
+            <a class="zap" href="#" data-zap="Sandra" data-servico="manicure">Manicure</a>
+            <a href="#" data-zap="Sandra" data-servico="">Ainda não sei</a>
           </div>
         </div>
         <a class="forte" data-so="info" data-wa="sandra" href="https://wa.me/5511967682546?text=Oi%2C%20Sandra%21%20%F0%9F%A4%8D%20Vim%20pelo%20site%20do%20Studio%20La%20Rocha%20e%20queria%20agendar%20um%20hor%C3%A1rio%20com%20voc%C3%AA."><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#25D366" d="M16 4.5a11.5 11.5 0 0 0-9.9 17.3L4.5 27.5l5.9-1.5A11.5 11.5 0 1 0 16 4.5zm6.7 16.1c-.3.8-1.6 1.6-2.3 1.7-1.1.2-1.9.1-4.2-.8-3.5-1.5-5.7-5-5.9-5.3-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.6c.2 0 .5-.1.8.6l1.1 2.5c.1.2.1.4 0 .6-.6 1.3-1.3 1.2-.9 1.9a9.4 9.4 0 0 0 4.7 4.1c.4.2.6.2.8-.1l1-1.3c.3-.4.5-.3.8-.2l2.3 1.1c.4.2.6.3.7.4.1.2.1.9-.2 1.6z"/></svg>Agendar com a Sandra</a>
@@ -199,9 +199,9 @@ body[data-modo="info"] [data-so]:not([data-so~="info"]),body[data-modo="online"]
         <div class="escolhe" data-so="whatsapp">
           <span class="pergunta">O que você precisa com a Amanda?</span>
           <div class="opcoes">
-            <a class="zap" href="https://wa.me/5511948907302" data-zap="Amanda" data-servico="auriculoterapia">Auriculoterapia</a>
-            <a class="zap" href="https://wa.me/5511948907302" data-zap="Amanda" data-servico="limpeza de pele">Limpeza de pele</a>
-            <a href="https://wa.me/5511948907302" data-zap="Amanda" data-servico="">Ainda não sei</a>
+            <a class="zap" href="#" data-zap="Amanda" data-servico="auriculoterapia">Auriculoterapia</a>
+            <a class="zap" href="#" data-zap="Amanda" data-servico="limpeza de pele">Limpeza de pele</a>
+            <a href="#" data-zap="Amanda" data-servico="">Ainda não sei</a>
           </div>
         </div>
         <a class="forte" data-so="info online" href="../agenda/?p=amanda" data-agenda><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Ver horários da Amanda</a>
@@ -223,8 +223,10 @@ body[data-modo="info"] [data-so]:not([data-so~="info"]),body[data-modo="online"]
   const ua = navigator.userAgent;
   const chave = ORIGENS[de] ? de : /Instagram/i.test(ua) ? 'instagram' : /FBAN|FBAV/.test(ua) ? 'facebook' : '';
   const origem = ORIGENS[chave] || 'site do Studio La Rocha';
+  // Números: hoje o da Sandra é o do salão. Quando ela tiver o número dela, troque só a linha da Sandra.
+  const ZAP = { Sandra: '5511967682546', Amanda: '5511948907302' };
   const sandra = document.querySelector('a[data-wa="sandra"]');
-  if (sandra) sandra.href = 'https://wa.me/5511967682546?text=' + encodeURIComponent(`Oi, Sandra! 🤍 Vim pelo ${origem} e queria agendar um horário com você.`);
+  if (sandra) sandra.href = 'https://wa.me/' + ZAP.Sandra + '?text=' + encodeURIComponent(`Oi, Sandra! 🤍 Vim pelo ${origem} e queria agendar um horário com você.`);
   // modo: online mostra os horários de cada uma; whatsapp pergunta o serviço e abre a conversa com a mensagem pronta
   const modo = ['online', 'whatsapp'].includes(new URLSearchParams(location.search).get('modo')) ? new URLSearchParams(location.search).get('modo') : 'info';
   document.body.dataset.modo = modo;
@@ -240,7 +242,7 @@ body[data-modo="info"] [data-so]:not([data-so~="info"]),body[data-modo="online"]
     const texto = servico
       ? `Oi, ${nome}! 🤍 Vim pelo ${origem} e gostaria de agendar ${servico} com você. Quais dias e horários você tem disponíveis?`
       : `Oi, ${nome}! 🤍 Vim pelo ${origem} e gostaria de agendar um horário com você, mas ainda não sei qual serviço. Pode me ajudar?`;
-    a.href += '?text=' + encodeURIComponent(texto);
+    a.href = 'https://wa.me/' + ZAP[nome] + '?text=' + encodeURIComponent(texto);
   });
   if (chave) document.querySelector('.voltar').href = '../links/?de=' + chave;
   if (chave) document.querySelectorAll('a[data-agenda]').forEach(a => { a.href += '&de=' + chave; });
