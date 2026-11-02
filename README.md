@@ -42,7 +42,7 @@ node ferramentas/painel.mjs ../AMANDA-ROCHA-AT
 ## Colocar no ar (GitHub Pages)
 
 Settings > Pages > Build and deployment: **Deploy from a branch**, branch `main`, pasta **/ (root)**.
-O endereço fica `https://kevinlaet.github.io/studiolarocha/links/`.
+O endereço fica `https://studiolarocha.com.br/links/`.
 
 ## De onde a cliente veio
 

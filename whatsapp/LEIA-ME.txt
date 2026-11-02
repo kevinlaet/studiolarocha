@@ -24,7 +24,7 @@ Descrição:   Beleza, saúde e bem-estar em Mauá. Cabelo, unhas, auriculoterap
              de pele. Agende pelo link e pague só no salão.
 Endereço:    [endereço oficial, depois de confirmado]
 Horário:     [dia a dia, depois de definido]
-Site:        https://kevinlaet.github.io/studiolarocha/links/?de=whatsapp
+Site:        https://studiolarocha.com.br/links/?de=whatsapp
 Instagram:   instagram.com/studiolarocha
 
 
@@ -32,7 +32,7 @@ Instagram:   instagram.com/studiolarocha
 -----------------------------------------------------------------------
 Oi! 🤍 Que bom ter você aqui no Studio La Rocha. Já já alguém responde.
 Se preferir, veja os horários livres e agende sozinha:
-https://kevinlaet.github.io/studiolarocha/agenda/?de=whatsapp
+https://studiolarocha.com.br/agenda/?de=whatsapp
 
 (Enviar para: novos contatos e quem não escreve há 14 dias.)
 
@@ -41,7 +41,7 @@ https://kevinlaet.github.io/studiolarocha/agenda/?de=whatsapp
 -----------------------
 Oi! Agora estamos atendendo e não conseguimos responder na hora. 🤍
 Assim que possível, a gente responde. Para agendar sem esperar:
-https://kevinlaet.github.io/studiolarocha/agenda/?de=whatsapp
+https://studiolarocha.com.br/agenda/?de=whatsapp
 
 (Enviar: fora do horário de funcionamento. Marque o horário em Horário comercial.)
 
@@ -52,7 +52,7 @@ Digite a barra "/" e o atalho, e a mensagem aparece pronta.
 
 /agendar
 Para agendar, é só escolher o dia e o horário aqui, no nosso link: 🤍
-https://kevinlaet.github.io/studiolarocha/agenda/?de=whatsapp
+https://studiolarocha.com.br/agenda/?de=whatsapp
 Se preferir, me diga o serviço e o dia que você quer, que eu vejo para você.
 
 /endereco
@@ -60,7 +60,7 @@ Estamos em [endereço oficial]. [Ponto de referência]. 📍
 Como chegar: [link do Google Maps, depois que o Perfil da Empresa estiver no ar]
 
 /horario
-Atendemos [dias e horários]. Para ver os horários livres: https://kevinlaet.github.io/studiolarocha/agenda/?de=whatsapp
+Atendemos [dias e horários]. Para ver os horários livres: https://studiolarocha.com.br/agenda/?de=whatsapp
 
 /precos
 [Serviço]: [preço] · [duração]
@@ -80,7 +80,7 @@ Oi, [nome]! Passando para lembrar do seu horário amanhã, [hora] · [serviço].
 Se precisar remarcar, é só me avisar por aqui.
 
 /remarcar
-Sem problema! Me diga o melhor dia e horário, ou escolha aqui: https://kevinlaet.github.io/studiolarocha/agenda/?de=whatsapp
+Sem problema! Me diga o melhor dia e horário, ou escolha aqui: https://studiolarocha.com.br/agenda/?de=whatsapp
 
 /obrigada
 Obrigada por vir, [nome]! 🤍 Foi um prazer. Se gostou, uma avaliação no Google ajuda muito o salão:
@@ -112,8 +112,8 @@ Só coloque preço que a Sandra e a Amanda tiverem definido.
 
 8. LINKS PARA CADA LUGAR (a origem da cliente aparece na mensagem)
 -----------------------------------------------------------------
-Bio do Instagram:   https://kevinlaet.github.io/studiolarocha/links/?de=instagram
-WhatsApp (perfil):  https://kevinlaet.github.io/studiolarocha/links/?de=whatsapp
-Google:             https://kevinlaet.github.io/studiolarocha/links/?de=google
-Cartão de visita:   https://kevinlaet.github.io/studiolarocha/links/?de=cartao
+Bio do Instagram:   https://studiolarocha.com.br/links/?de=instagram
+WhatsApp (perfil):  https://studiolarocha.com.br/links/?de=whatsapp
+Google:             https://studiolarocha.com.br/links/?de=google
+Cartão de visita:   https://studiolarocha.com.br/links/?de=cartao
 Cartaz / espelho:   .../links/?de=cartaz   ·   .../links/?de=espelho
