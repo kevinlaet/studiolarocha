@@ -129,6 +129,15 @@ h1.pagina{font-family:Cormorant,Georgia,serif;font-weight:500;font-size:clamp(34
 .botoes .forte{background:linear-gradient(160deg,#2B2622,#1F1A17);color:var(--marfim);box-shadow:0 10px 24px rgba(31,26,23,.22)}
 .botoes .leve{background:var(--papel);color:var(--tinta);border:1px solid var(--borda)}
 .botoes .leve svg{color:var(--ouro-e)}
+/* o que aparece depende do botão que a cliente tocou: ?modo=online, ?modo=whatsapp ou nenhum (info) */
+body[data-modo="info"] [data-so]:not([data-so~="info"]),body[data-modo="online"] [data-so]:not([data-so~="online"]),body[data-modo="whatsapp"] [data-so]:not([data-so~="whatsapp"]){display:none}
+.escolhe .pergunta{display:block;font-weight:700;font-size:13px;color:var(--tinta);margin-bottom:9px}
+.opcoes{display:flex;flex-wrap:wrap;gap:8px}
+.opcoes a{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 16px;border-radius:99px;text-decoration:none;font-weight:700;font-size:14px;color:var(--tinta);background:var(--papel);border:1px solid var(--borda);transition:transform .18s,border-color .25s}
+.opcoes a:active{transform:scale(.97)}
+.opcoes a:hover{border-color:var(--ouro)}
+.opcoes a.zap{background:linear-gradient(160deg,#2B2622,#1F1A17);color:var(--marfim);border-color:transparent}
+.opcoes a:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
 .vem{text-align:center;padding:18px;border-radius:22px;border:1px dashed rgba(176,141,87,.45);font-size:13px;line-height:1.5;color:var(--tinta-2)}
 .vem b{display:block;font-family:Cormorant,Georgia,serif;font-size:19px;font-weight:600;color:var(--tinta);margin-bottom:2px}
 
@@ -150,8 +159,8 @@ h1.pagina{font-family:Cormorant,Georgia,serif;font-weight:500;font-size:clamp(34
     <span class="mini"><img src="../img/simbolo.svg" alt="" width="651" height="780">STUDIO LA ROCHA</span>
   </div>
 
-  <h1 class="pagina entra" style="--o:1">Nossas profissionais</h1>
-  <p class="intro entra" style="--o:2">Quem cuida de você no Studio La Rocha. Escolha com quem quer agendar.</p>
+  <h1 class="pagina entra" style="--o:1" id="titulo">Nossas profissionais</h1>
+  <p class="intro entra" style="--o:2" id="intro">Quem cuida de você no Studio La Rocha. Escolha com quem quer agendar.</p>
 
   <div class="lista">
     <!-- FOTO: quando chegar, trocar o <span class="inicial"> por <img src="../img/sandra.jpg" alt="Sandra"> -->
@@ -163,7 +172,17 @@ h1.pagina{font-family:Cormorant,Georgia,serif;font-weight:500;font-size:clamp(34
       <p class="bio">Sandra é cabeleireira, manicure e a dona do Studio La Rocha. Faz corte e coloração e é muito procurada nas unhas pelo acabamento impecável e pelo cuidado com cada detalhe, até nas unhas mais difíceis. Atende com carinho e atenção, para você sair bonita, bem cuidada e com vontade de voltar.</p>
       <div class="chips"><span>Corte</span><span>Coloração</span><span>Manicure</span></div>
       <div class="botoes">
-        <a class="forte" data-wa="sandra" href="https://wa.me/5511967682546?text=Oi%2C%20Sandra%21%20%F0%9F%A4%8D%20Vim%20pelo%20site%20do%20Studio%20La%20Rocha%20e%20queria%20agendar%20um%20hor%C3%A1rio%20com%20voc%C3%AA."><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#25D366" d="M16 4.5a11.5 11.5 0 0 0-9.9 17.3L4.5 27.5l5.9-1.5A11.5 11.5 0 1 0 16 4.5zm6.7 16.1c-.3.8-1.6 1.6-2.3 1.7-1.1.2-1.9.1-4.2-.8-3.5-1.5-5.7-5-5.9-5.3-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.6c.2 0 .5-.1.8.6l1.1 2.5c.1.2.1.4 0 .6-.6 1.3-1.3 1.2-.9 1.9a9.4 9.4 0 0 0 4.7 4.1c.4.2.6.2.8-.1l1-1.3c.3-.4.5-.3.8-.2l2.3 1.1c.4.2.6.3.7.4.1.2.1.9-.2 1.6z"/></svg>Agendar com a Sandra</a>
+        <a class="forte" data-so="online" href="../agenda/?p=sandra" data-agenda><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Ver horários da Sandra</a>
+        <div class="escolhe" data-so="whatsapp">
+          <span class="pergunta">O que você precisa com a Sandra?</span>
+          <div class="opcoes">
+            <a class="zap" href="https://wa.me/5511967682546" data-zap="Sandra" data-servico="um corte de cabelo">Corte</a>
+            <a class="zap" href="https://wa.me/5511967682546" data-zap="Sandra" data-servico="uma coloração">Coloração</a>
+            <a class="zap" href="https://wa.me/5511967682546" data-zap="Sandra" data-servico="manicure">Manicure</a>
+            <a href="https://wa.me/5511967682546" data-zap="Sandra" data-servico="">Ainda não sei</a>
+          </div>
+        </div>
+        <a class="forte" data-so="info" data-wa="sandra" href="https://wa.me/5511967682546?text=Oi%2C%20Sandra%21%20%F0%9F%A4%8D%20Vim%20pelo%20site%20do%20Studio%20La%20Rocha%20e%20queria%20agendar%20um%20hor%C3%A1rio%20com%20voc%C3%AA."><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#25D366" d="M16 4.5a11.5 11.5 0 0 0-9.9 17.3L4.5 27.5l5.9-1.5A11.5 11.5 0 1 0 16 4.5zm6.7 16.1c-.3.8-1.6 1.6-2.3 1.7-1.1.2-1.9.1-4.2-.8-3.5-1.5-5.7-5-5.9-5.3-.2-.2-1.4-1.8-1.4-3.5s.9-2.5 1.2-2.9c.3-.3.7-.4.9-.4h.6c.2 0 .5-.1.8.6l1.1 2.5c.1.2.1.4 0 .6-.6 1.3-1.3 1.2-.9 1.9a9.4 9.4 0 0 0 4.7 4.1c.4.2.6.2.8-.1l1-1.3c.3-.4.5-.3.8-.2l2.3 1.1c.4.2.6.3.7.4.1.2.1.9-.2 1.6z"/></svg>Agendar com a Sandra</a>
         <a class="leve" href="https://www.instagram.com/sandraaparecida5566/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>Instagram da Sandra</a>
       </div>
     </article>
@@ -177,7 +196,15 @@ h1.pagina{font-family:Cormorant,Georgia,serif;font-weight:500;font-size:clamp(34
       <p class="bio">Amanda Rocha é enfermeira (COREN-SP 617675) e trabalha com saúde mental. Atende só mulheres, com auriculoterapia e limpeza de pele, unindo a biossegurança da enfermagem a um atendimento acolhedor e sem pressa, para você sair mais leve e cuidada.</p>
       <div class="chips"><span>Auriculoterapia</span><span>Limpeza de pele</span></div>
       <div class="botoes">
-        <a class="forte" href="../agenda/?p=amanda" data-agenda><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Ver horários da Amanda</a>
+        <div class="escolhe" data-so="whatsapp">
+          <span class="pergunta">O que você precisa com a Amanda?</span>
+          <div class="opcoes">
+            <a class="zap" href="https://wa.me/5511948907302" data-zap="Amanda" data-servico="auriculoterapia">Auriculoterapia</a>
+            <a class="zap" href="https://wa.me/5511948907302" data-zap="Amanda" data-servico="limpeza de pele">Limpeza de pele</a>
+            <a href="https://wa.me/5511948907302" data-zap="Amanda" data-servico="">Ainda não sei</a>
+          </div>
+        </div>
+        <a class="forte" data-so="info online" href="../agenda/?p=amanda" data-agenda><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Ver horários da Amanda</a>
         <a class="leve" href="https://www.instagram.com/amandarochaat/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>Instagram da Amanda</a>
       </div>
     </article>
@@ -198,6 +225,23 @@ h1.pagina{font-family:Cormorant,Georgia,serif;font-weight:500;font-size:clamp(34
   const origem = ORIGENS[chave] || 'site do Studio La Rocha';
   const sandra = document.querySelector('a[data-wa="sandra"]');
   if (sandra) sandra.href = 'https://wa.me/5511967682546?text=' + encodeURIComponent(`Oi, Sandra! 🤍 Vim pelo ${origem} e queria agendar um horário com você.`);
+  // modo: online mostra os horários de cada uma; whatsapp pergunta o serviço e abre a conversa com a mensagem pronta
+  const modo = ['online', 'whatsapp'].includes(new URLSearchParams(location.search).get('modo')) ? new URLSearchParams(location.search).get('modo') : 'info';
+  document.body.dataset.modo = modo;
+  if (modo === 'online') {
+    document.getElementById('titulo').textContent = 'Agendar online';
+    document.getElementById('intro').textContent = 'Com quem você quer agendar? Escolha e veja os horários livres.';
+  } else if (modo === 'whatsapp') {
+    document.getElementById('titulo').textContent = 'Agendar pelo WhatsApp';
+    document.getElementById('intro').textContent = 'Toque no que você precisa e a conversa abre com a mensagem pronta.';
+  }
+  document.querySelectorAll('a[data-zap]').forEach(a => {
+    const nome = a.dataset.zap, servico = a.dataset.servico;
+    const texto = servico
+      ? `Oi, ${nome}! 🤍 Vim pelo ${origem} e gostaria de agendar ${servico} com você. Quais dias e horários você tem disponíveis?`
+      : `Oi, ${nome}! 🤍 Vim pelo ${origem} e gostaria de agendar um horário com você, mas ainda não sei qual serviço. Pode me ajudar?`;
+    a.href += '?text=' + encodeURIComponent(texto);
+  });
   if (chave) document.querySelector('.voltar').href = '../links/?de=' + chave;
   if (chave) document.querySelectorAll('a[data-agenda]').forEach(a => { a.href += '&de=' + chave; });
 })();
