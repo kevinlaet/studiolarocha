@@ -1,0 +1,93 @@
+# Studio La Rocha — contexto do projeto (leia antes de mexer em qualquer coisa)
+
+Este arquivo é a memória do projeto. Quem continuar o trabalho (Claude ou pessoa) deve ler tudo antes de agir e atualizar ao final de cada etapa.
+
+## 1. Quem é quem
+- **Kevin Laet** — marido da Amanda. Quem pede e decide. Está sempre atarefado: o objetivo é **economizar o tempo dele**. Fala português do Brasil, simples. Usa o celular (iPhone) e o app Claude.
+- **Sandra** — dona do salão, mãe da Amanda, 52 anos, cabeleireira (corte, coloração) e manicure muito requisitada (inclusive desencravar unhas). Agenda lotada. Vai se dedicar 100% ao salão; no começo atendendo, depois só gerenciando. Instagram pessoal: @sandraaparecida5566. Ainda **não deu o e-mail** para o login do painel.
+- **Amanda Rocha** — 29 anos, enfermeira (COREN-SP 617675), saúde mental, atende só mulheres (auriculoterapia e limpeza de pele). **Sócia com 50%** do salão **e** profissional solo, com site e marca próprios (amandarochabemestar.com.br). Instagram @amandarochaat.
+- Ninguém tem dinheiro: sempre preferir soluções gratuitas/baratas (GitHub Pages, Supabase grátis, ntfy). Ainda faltam móveis, produtos e decoração. Tem 2 cadeiras de cabeleireiro, 1 maca, 1 lavatório, espelhos. Obra e pintura prontas.
+
+## 2. O negócio
+- Nome **sempre** "**Studio La Rocha**" ("Studio" sem acento; nunca Stúdio, Estudio, La Rocha Studio). Verificado: nenhum salão com esse nome encontrado.
+- Local: **Vila Nova Mauá, Mauá - SP**. Endereço usado no cartão da Amanda: Rua Onivaldo Vanderlei Dionísio, 25 (confirmar com a Sandra antes de usar no salão). Salão com inauguração "em breve" (data não definida).
+- Slogan: "Beleza, saúde e bem-estar". Serviços: Cabelo (corte e coloração), Unhas (manicure), Auriculoterapia e Limpeza de pele (Amanda). **Novos serviços em breve** (aparece nos posts).
+- Modelo: o salão também **aluga cadeira/maca** para outras profissionais (parceiras). Contrato modelo existe como artifact; falta confirmar modelo de aluguel com a Sandra.
+- Instagram do salão: **@studiolarocha** (+100 seguidores, estava vazio; 6 posts prontos para publicar).
+
+## 3. Regras que nunca mudam
+1. **Nunca inventar dados do salão** (serviços, preços, horários, endereço, datas, CNPJ). Perguntar.
+2. **Nada vai a público/impressão sem aprovação por escrito da Sandra** (WhatsApp vale).
+3. **Nunca pedir nem guardar senhas**, nem a Secret key / service_role do Supabase. Só a chave pública (`sb_publishable_…`) pode ficar no código.
+4. **Pagamento só no salão.** Nunca Pix/sinal por mensagem (aviso fixo na página de links).
+5. **Saúde:** não prometer resultado de procedimento. Anúncio de desencravar unha fica pendente de orientação da Vigilância Sanitária.
+6. **Fotos de clientes** só com autorização escrita.
+7. Linguagem **simples**, para a cliente mais leiga entender sozinha. Toda página termina com "Desenvolvido por Kevin Laet".
+8. Qualidade acima de velocidade: a cliente deve pensar "que fofo, que capricho", mas continuar **fácil de usar**. Conferir no celular (largura ~390px) antes de entregar.
+9. Não pedir ao Kevin o que dá para resolver sozinho; quando precisar dele, dar passo a passo curto, valores para copiar **separados**.
+10. Não criar PR sem pedido. Não mexer no repo/Pages da Amanda (renomear/apagar quebra o QR dos 100 cartões já pedidos).
+
+## 4. Padrão visual (identidade)
+- Cores: creme `#F7F1E8`, papel `#FFFCF7`, ouro `#B08D57` (claro `#D9BC86`, escuro `#8E6E3E`), bronze `#9C7A45`, tinta `#2B2622`, escuro `#1F1A17`, marfim `#F4EBDD`. Brilho dourado: `linear-gradient(100deg,#8E6E3E,#C9A468,#F1DEB4,#C9A468,#8E6E3E)`.
+- Fontes (locais em `fonts/`): **Cormorant** (títulos, caixa alta com letter-spacing), **Great Vibes** (assinatura), **Montserrat** (texto).
+- Logo: símbolo opção C (`img/simbolo.svg`) + nome. Foto de perfil redonda: versão "nome em arco" (já trocada), alternativa "nome reto".
+- Estilo: elegante, quente, dourado/creme, vidro translúcido, animações suaves de entrada; ícones de linha em traço ouro; botões grandes.
+- Posts Instagram: **2160x2700 (4:5)**, exportados com Playwright (`deviceScaleFactor: 2`). Nunca exportar em 1x.
+
+## 5. Endereços (domínio próprio **studiolarocha.com.br**)
+- Links (bio): `https://studiolarocha.com.br/links/?de=instagram`
+- Agenda: `https://studiolarocha.com.br/agenda/` (`?p=sandra` ou `?p=amanda` abre direto na profissional)
+- Profissionais: `…/profissionais/` (`?modo=online` ou `?modo=whatsapp`)
+- Painel do salão: `https://studiolarocha.com.br/painel/`
+- Amanda: `https://amandarochabemestar.com.br/` (QR dos cartões dela: `kevinlaet.github.io/AMANDA-ROCHA-AT/?o=cartao#agendar`, que redireciona).
+- Origem da cliente via `?de=` (`instagram, facebook, google, cartao, cartaz, espelho, amanda, whatsapp`), ou detecção pelo navegador do Instagram/Facebook. Site da Amanda usa `?o=`. Os textos de WhatsApp sempre dizem de onde a cliente veio.
+- **DNS (Registro.br → GitHub Pages):** A (Nome vazio = raiz) para 185.199.108.153, .109.153, .110.153, .111.153; CNAME `www` → `kevinlaet.github.io`. Nome "@" fica gravado literalmente e está errado. Modo básico trava o modo avançado por horas.
+- **Pendente:** `www.studiolarocha.com.br` dá erro de certificado até o CNAME `www` entrar (Kevin esperando o modo avançado voltar). Depois: Enforce HTTPS já está ativo para o domínio raiz.
+- Teste ao vivo não é possível da sessão (proxy bloqueia github.io e o domínio); pedir ao Kevin para testar no celular.
+
+## 6. Repositórios
+- `kevinlaet/studiolarocha` (branch `main`, publicado em GitHub Pages) — este repo. Clone local: `/home/user/studiolarocha`.
+  - `links/` página de links; `profissionais/`; `agenda/` (agenda do salão); `painel/` (cópia do painel da Amanda com a marca do salão; **não editar** `index.html`, `painel.js`, manifesto — só `painel/marca.js`); `config.js`; `whatsapp/` (pacote WhatsApp Business); `instagram/` (posts, perfil, destaques, legendas em `LEIA-ME.txt`; `fonte/` gera os PNGs); `ferramentas/painel.mjs` (sincroniza o painel).
+- `kevinlaet/AMANDA-ROCHA-AT` — site/painel/banco da Amanda (clone `/home/user/AMANDA-ROCHA-AT`). Banco em `supabase/schema.sql` e `atualizacao.sql` (idempotente). Painel em `admin/`. Testes em `tests/` (`npm test`, PGlite).
+  - Trabalho recente está na branch `claude/new-session-gjqujs` (login 30 dias, cadastro de clientes, story, domínio no SQL). **Falta o Kevin abrir novo PR para `main` e mesclar** com os testes verdes.
+- `kevinlaet/IA.RTS-Marketing-inteligente` — repositório irmão de marketing (branch de trabalho `claude/new-session-gjqujs`).
+- Branch de trabalho nas sessões do app: `claude/new-session-gjqujs`; no `studiolarocha` o Kevin publica direto em `main`.
+
+## 7. Arquitetura da agenda (resumo)
+- **Um banco só** (Supabase da Amanda). Tabelas: `profissionais` (papel `socia`/`parceira`), `recursos` (maca, cadeira-1, cadeira-2, mesa-unhas), `horarios`, `servicos`, `clientes`, `historico`, etc. Colunas `profissional` com padrão `amanda`.
+- Sócias (Amanda, Sandra) veem/mexem em tudo; parceiras só no que é delas (garantido por RLS no banco). Chave "Só a minha agenda / Todas as profissionais" no painel.
+- **A maca (e cadeiras/mesa) trava** entre profissionais por trigger `checa_recurso` (`recurso_ocupado`).
+- Clientes: autocompletar nome ao enviar horários; cada profissional vê só as suas; depois de cadastrado, só sócias editam/excluem. Login "lembrar" 30 dias, Face ID ajuda.
+- A agenda da Sandra é lotada: **ela não vai manter horários livres no painel**. Por isso foi descartada a ideia do story automático "Horários livres" (fica só como código na branch da Amanda).
+- Fluxo da página de links (atual): botões **Agendar online** (`profissionais/?modo=online` → "Ver horários" abre `agenda/?p=…`) e **Agendar pelo WhatsApp** (`?modo=whatsapp` → escolhe profissional e serviço → abre WhatsApp com saudação + resumo + origem).
+- **Números de WhatsApp:** centralizados no objeto `ZAP` em `profissionais/index.html`. Amanda → (11) 94890-7302 (`5511948907302`). Sandra → número do salão (11) 96768-2546 (`5511967682546`), por enquanto o mesmo. Quando a Sandra tiver número próprio, trocar **só a linha `Sandra`** em `ZAP`; o número do salão também está em `config.js`, `links/index.html` (tiles de Cabelo/Unhas/aluguel, `data-wa`) e `links/studio-la-rocha.vcf`. O número do salão será convertido em WhatsApp Business.
+
+## 8. Instagram do salão — estado
+- 6 posts prontos em `instagram/` (ordem do `LEIA-ME.txt`: 1 inauguração, 2 nossa história, 3 chegamos, 4 agendar, 5 saúde, 6 beleza), todos 2160x2700, com "Novos serviços em breve" nos 3 de serviços. Legendas e bio em `instagram/LEIA-ME.txt`. Falta a Sandra aprovar por escrito, e o Kevin postar.
+- Bio: `Studio La Rocha | Salão em Mauá` / "Beleza, saúde e bem-estar ✨ / Cabelo · Unhas · Auriculoterapia · Limpeza de pele / Por @sandraaparecida5566 e @amandarochaat / 📍 Mauá - SP · Agende 👇". Trocar o link da bio e do WhatsApp Business para o domínio (HTTPS).
+- Próximo passo estratégico: **dia de fotos** (Sandra + Amanda juntas, retratos individuais, espaço/cadeiras/lavatório/maca, vídeo curto de 10–15s) e então carrossel, Reels e destaques com foto. Perfil só com arte ainda parece "vazio".
+
+## 9. Pendências (atualizar sempre)
+**Com o Kevin**
+- Quando o Registro.br liberar o modo avançado: CNAME `www` → `kevinlaet.github.io` e A `.109/.110/.111` (e `.108`), salvar; testar os 4 endereços no celular.
+- Escanear o QR do cartão da Amanda e confirmar o redirecionamento.
+- Abrir PR de `claude/new-session-gjqujs` → `main` (AMANDA-ROCHA-AT) e mesclar; rodar `atualizacao.sql` de novo no Supabase se preciso; conferir o painel da Amanda.
+- Postar os 6 posts; trocar link da bio/WhatsApp Business; enviar às duas as listas de perguntas; criar o acesso da Sandra quando vier o e-mail.
+- Próximos cartões (reimpressão futura): incluir endereço e o site da Amanda; QR direto no domínio (`amandarochabemestar.com.br/?o=cartao#agendar`; salão: `studiolarocha.com.br/links/?de=cartao`).
+
+**Aguardando a Sandra:** serviços, preços e duração; horários de funcionamento; endereço e ponto de referência; data de inauguração; MEI/CNPJ/alvará/licença sanitária/contador; modelo de aluguel; e-mail do salão; decisão do WhatsApp Business / novo número dela; fotos; aprovação escrita dos posts.
+
+**Aguardando a Amanda:** uso da maca (quais serviços), como usa o espaço, horários de sábado e fim da promoção de R$ 75, contrato/CNPJ, configurar ntfy, foto.
+
+**Backlog do Claude:** fotos na página de profissionais; cartão de visita e cartaz do salão com QR; Google Perfil da Empresa; busca no INPI do nome; vale-presente e fidelidade (Amanda tem cartão de 5 carimbos); roteiros de vídeo; carrossel/Reels/destaques com fotos; follow-ups do contrato.
+
+## 10. Como trabalhar aqui (checklist antes de entregar)
+1. Ler este arquivo e o `README.md`.
+2. Mudou o painel da Amanda? Rodar `node ferramentas/painel.mjs ../AMANDA-ROCHA-AT` e `--conferir`.
+3. Mudou o banco? Atualizar `schema.sql` **e** `atualizacao.sql`, manter idempotente, rodar `npm test`.
+4. Testar no navegador (Playwright), em largura de celular, e olhar as capturas.
+5. Mudou número, endereço ou link? Procurar em todo o repo (`grep`) e trocar tudo, inclusive `.vcf`, `LEIA-ME.txt`, README.
+6. Commit claro em português; push; avisar o Kevin com o que ele precisa fazer (se houver), sem jargão.
+7. Atualizar a seção 9 deste arquivo.
+
+Desenvolvido por Kevin Laet
