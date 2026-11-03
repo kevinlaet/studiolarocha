@@ -42,7 +42,8 @@ Este arquivo é a memória do projeto. Quem continuar o trabalho (Claude ou pess
 - Amanda: `https://amandarochabemestar.com.br/` (QR dos cartões dela: `kevinlaet.github.io/AMANDA-ROCHA-AT/?o=cartao#agendar`, que redireciona).
 - Origem da cliente via `?de=` (`instagram, facebook, google, cartao, cartaz, espelho, amanda, whatsapp`), ou detecção pelo navegador do Instagram/Facebook. Site da Amanda usa `?o=`. Os textos de WhatsApp sempre dizem de onde a cliente veio.
 - **DNS (Registro.br → GitHub Pages):** A (Nome vazio = raiz) para 185.199.108.153, .109.153, .110.153, .111.153; CNAME `www` → `kevinlaet.github.io`. Nome "@" fica gravado literalmente e está errado. Modo básico trava o modo avançado por horas.
-- **Pendente:** `www.studiolarocha.com.br` dá erro de certificado até o CNAME `www` entrar (Kevin esperando o modo avançado voltar). Depois: Enforce HTTPS já está ativo para o domínio raiz.
+- **Regra:** em bio, cartões, QRs, cartazes e documentos usar SEMPRE o endereço **sem `www`** (`https://studiolarocha.com.br/...`). O `www` só existe para redirecionar quem digitar à mão.
+- **Estado (confirmado pelo Kevin no celular):** domínio raiz abre com HTTPS ("Privado"): links, agenda e profissionais OK. O `www` ainda mostra aviso de certificado (GitHub emite sozinho em até algumas horas; se persistir: Settings > Pages > Remove e recolocar o domínio, depois Enforce HTTPS). Não bloqueia nada.
 - Teste ao vivo não é possível da sessão (proxy bloqueia github.io e o domínio); pedir ao Kevin para testar no celular.
 
 ## 6. Repositórios
@@ -69,7 +70,7 @@ Este arquivo é a memória do projeto. Quem continuar o trabalho (Claude ou pess
 
 ## 9. Pendências (atualizar sempre)
 **Com o Kevin**
-- Quando o Registro.br liberar o modo avançado: CNAME `www` → `kevinlaet.github.io` e A `.109/.110/.111` (e `.108`), salvar; testar os 4 endereços no celular.
+- DNS do Registro.br já ajustado (salvo com sucesso). Só conferir se o `www` ganhou certificado; trocar link da bio e do WhatsApp Business para o endereço sem `www`.
 - Escanear o QR do cartão da Amanda e confirmar o redirecionamento.
 - Abrir PR de `claude/new-session-gjqujs` → `main` (AMANDA-ROCHA-AT) e mesclar; rodar `atualizacao.sql` de novo no Supabase se preciso; conferir o painel da Amanda.
 - Postar os 6 posts; trocar link da bio/WhatsApp Business; enviar às duas as listas de perguntas; criar o acesso da Sandra quando vier o e-mail.
