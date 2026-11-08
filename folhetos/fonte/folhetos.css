@@ -1,0 +1,63 @@
+@font-face{font-family:"Cormorant";src:url(cormorant.woff2) format("woff2");font-weight:300 700}
+@font-face{font-family:"Great Vibes";src:url(greatvibes.woff2) format("woff2")}
+@font-face{font-family:"Montserrat";src:url(montserrat.woff2) format("woff2");font-weight:100 900}
+:root{--creme:#F7F1E8;--ouro:#B08D57;--ouro-c:#C9A468;--tinta:#2B2622;--tinta-2:#6A6058;--bronze:#9C7A45;--escuro:#1F1A17;--marfim:#F4EBDD;--brilho:linear-gradient(100deg,#A8854F 0%,#D9BC86 38%,#F3E2BC 50%,#D9BC86 62%,#A8854F 100%)}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:148mm 210mm;margin:0}
+body{background:#888}
+.folheto{position:relative;width:559px;height:794px;overflow:hidden;margin:0 0 20px;padding:38px 44px 0;font-family:"Montserrat";isolation:isolate;break-after:page;page-break-after:always}
+@media print{body{background:none}.folheto{margin:0}}
+.claro{background:var(--creme);color:var(--tinta)}
+.escuro{background:var(--escuro);color:var(--marfim)}
+.luz{position:absolute;border-radius:50%;filter:blur(50px);z-index:-1}
+.claro .luz.a{width:320px;height:320px;background:#EBD6AC;top:-110px;right:-100px;opacity:.7}
+.claro .luz.b{width:270px;height:270px;background:#F1E2C5;bottom:-100px;left:-80px;opacity:.8}
+.escuro .luz.a{width:320px;height:320px;background:#5A4428;top:-120px;right:-110px;opacity:.55}
+.escuro .luz.b{width:270px;height:270px;background:#3A2C1B;bottom:-100px;left:-90px;opacity:.7}
+.pontos{position:absolute;inset:0;z-index:-1;background-image:radial-gradient(rgba(176,141,87,.28) .8px,transparent 1.1px);background-size:18px 18px;-webkit-mask-image:radial-gradient(ellipse 60% 40% at 85% 10%,#000 10%,transparent 75%);mask-image:radial-gradient(ellipse 60% 40% at 85% 10%,#000 10%,transparent 75%)}
+.arco{position:absolute;z-index:-1;border-radius:50%;border:1px solid rgba(176,141,87,.35)}
+.arco.um{width:470px;height:470px;right:-270px;top:-200px}
+.arco.dois{width:570px;height:570px;right:-330px;top:-250px;border-color:rgba(176,141,87,.18)}
+.faisca{position:absolute;color:var(--ouro-c)}.faisca svg{width:100%;height:100%;display:block}
+.topo{display:flex;align-items:center;justify-content:space-between}
+.mini{display:flex;align-items:center;gap:9px;font-family:"Cormorant";font-weight:500;font-size:14px;letter-spacing:.24em}
+.mini img{height:29px}
+.selo{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:7px 13px;border-radius:99px;border:1px solid rgba(176,141,87,.5)}
+.escuro .selo{color:var(--ouro-c)}.claro .selo{color:var(--bronze)}
+.selo i{width:6px;height:6px;border-radius:50%;background:var(--ouro-c);box-shadow:0 0 0 3px rgba(201,164,104,.25)}
+.rotulo{margin-top:36px;font-weight:600;font-size:11px;letter-spacing:.38em;text-transform:uppercase;color:var(--bronze)}
+.escuro .rotulo{color:var(--ouro-c)}
+h2.longo{font-size:46px}
+h2{font-family:"Cormorant";font-weight:500;font-size:58px;line-height:.98;margin-top:10px;letter-spacing:.005em}
+.script{font-family:"Great Vibes";font-size:32px;line-height:1.15;margin-top:4px;background:var(--brilho);-webkit-background-clip:text;background-clip:text;color:transparent}
+.claro .script{background:linear-gradient(100deg,#8E6E3E,#B08D57 45%,#C9A468 60%,#8E6E3E);-webkit-background-clip:text;background-clip:text}
+.lead{margin-top:16px;font-size:13px;line-height:1.5;max-width:420px}
+.claro .lead{color:var(--tinta-2)}.escuro .lead{color:rgba(244,235,221,.78)}
+.sub{margin-top:22px;font-weight:700;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--bronze)}
+.escuro .sub{color:var(--ouro-c)}
+.itens{display:grid;gap:11px;margin-top:11px}
+.item{display:flex;align-items:center;gap:15px;padding:15px 17px;border-radius:17px}
+.claro .item{background:rgba(255,252,247,.78);border:1px solid rgba(176,141,87,.3);box-shadow:0 8px 22px rgba(142,110,62,.1)}
+.escuro .item{background:rgba(244,235,221,.06);border:1px solid rgba(201,164,104,.3);box-shadow:0 8px 22px rgba(0,0,0,.3)}
+.ico{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center}
+.claro .ico{background:linear-gradient(145deg,#FFF8EC,#EFDDBC);box-shadow:inset 0 0 0 1px rgba(176,141,87,.3)}
+.escuro .ico{background:linear-gradient(145deg,rgba(201,164,104,.28),rgba(201,164,104,.08));box-shadow:inset 0 0 0 1px rgba(201,164,104,.4)}
+.ico svg{width:21px;height:21px}
+.item h3{font-weight:700;font-size:14px;line-height:1.2}
+.item p{font-size:11.5px;line-height:1.35;margin-top:1px}
+.claro .item p{color:var(--tinta-2)}.escuro .item p{color:rgba(244,235,221,.72)}
+.breve{font-style:normal;font-weight:700;font-size:8.5px;letter-spacing:.18em;text-transform:uppercase;margin-left:9px;padding:3px 8px;border-radius:99px;vertical-align:2px;background:var(--brilho);color:var(--escuro)}
+.nota{margin-top:14px;font-size:9px;line-height:1.45;font-style:italic}
+.claro .nota{color:var(--tinta-2)}.escuro .nota{color:rgba(244,235,221,.62)}
+.base{position:absolute;left:44px;right:44px;bottom:62px;display:flex;align-items:center;gap:17px;padding:13px 16px;border-radius:20px}
+.claro .base{background:rgba(255,252,247,.85);border:1px solid rgba(176,141,87,.35)}
+.escuro .base{background:rgba(244,235,221,.07);border:1px solid rgba(201,164,104,.35)}
+.qr{flex:none;width:90px;height:90px;background:#fff;border-radius:12px;padding:8px;box-shadow:0 0 0 1px rgba(176,141,87,.35)}
+.qr img{width:100%;height:100%;display:block}
+.agende b{display:block;font-family:"Cormorant";font-weight:600;font-size:21px;line-height:1.1}
+.agende span{display:block;margin-top:5px;font-size:11px;line-height:1.45}
+.claro .agende span{color:var(--tinta-2)}.escuro .agende span{color:rgba(244,235,221,.75)}
+.agende small{display:block;margin-top:5px;font-weight:700;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--bronze)}
+.escuro .agende small{color:var(--ouro-c)}
+.rodape{position:absolute;left:44px;right:44px;bottom:26px;display:flex;justify-content:space-between;font-weight:500;font-size:8px;letter-spacing:.12em;text-transform:uppercase}
+.claro .rodape{color:var(--bronze)}.escuro .rodape{color:var(--ouro-c)}
