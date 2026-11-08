@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Studio La Rocha · Aviso de agenda da Amanda</title>
+<style>
+  @font-face { font-family: "Cormorant"; src: url(cormorant.woff2) format("woff2"); font-weight: 300 700; }
+  @font-face { font-family: "Great Vibes"; src: url(greatvibes.woff2) format("woff2"); }
+  @font-face { font-family: "Montserrat"; src: url(montserrat.woff2) format("woff2"); font-weight: 100 900; }
+
+  :root {
+    --creme: #F7F1E8; --papel: #FFFCF7; --ouro: #B08D57; --ouro-c: #C9A468; --ouro-e: #8E6E3E;
+    --tinta: #2B2622; --tinta-2: #6A6058; --bronze: #9C7A45; --escuro: #1F1A17; --marfim: #F4EBDD;
+    --brilho: linear-gradient(100deg, #A8854F 0%, #D9BC86 38%, #F3E2BC 50%, #D9BC86 62%, #A8854F 100%);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #888; }
+
+  .post { position: relative; width: 1080px; height: 1350px; overflow: hidden; margin: 0 0 40px; padding: 110px 110px 0; font-family: "Montserrat"; isolation: isolate; }
+  .claro { background: var(--creme); color: var(--tinta); }
+  .escuro { background: var(--escuro); color: var(--marfim); }
+
+  /* luzes, grade de pontos e arcos finos */
+  .luz { position: absolute; border-radius: 50%; filter: blur(90px); z-index: -1; }
+  .claro .luz.a { width: 620px; height: 620px; background: #EBD6AC; top: -220px; right: -200px; opacity: .7; }
+  .claro .luz.b { width: 520px; height: 520px; background: #F1E2C5; bottom: -200px; left: -160px; opacity: .8; }
+  .escuro .luz.a { width: 620px; height: 620px; background: #5A4428; top: -240px; right: -220px; opacity: .55; }
+  .escuro .luz.b { width: 520px; height: 520px; background: #3A2C1B; bottom: -200px; left: -180px; opacity: .7; }
+  .pontos { position: absolute; inset: 0; z-index: -1; background-image: radial-gradient(rgba(176,141,87,.28) 1.4px, transparent 1.8px); background-size: 34px 34px; -webkit-mask-image: radial-gradient(ellipse 60% 45% at 85% 12%, #000 10%, transparent 75%); mask-image: radial-gradient(ellipse 60% 45% at 85% 12%, #000 10%, transparent 75%); }
+  .arco { position: absolute; z-index: -1; border-radius: 50%; border: 2px solid rgba(176,141,87,.35); }
+  .arco.um { width: 900px; height: 900px; right: -520px; top: -380px; }
+  .arco.dois { width: 1100px; height: 1100px; right: -640px; top: -480px; border-color: rgba(176,141,87,.18); }
+
+  /* topo: marca pequena e contador */
+  .topo { display: flex; align-items: center; justify-content: space-between; }
+  .mini { display: flex; align-items: center; gap: 16px; font-family: "Cormorant"; font-weight: 500; font-size: 26px; letter-spacing: .24em; }
+  .mini img { height: 54px; }
+  .contador { font-weight: 600; font-size: 20px; letter-spacing: .24em; color: var(--bronze); padding: 12px 20px; border-radius: 99px; border: 1.5px solid rgba(176,141,87,.4); }
+  .escuro .contador { color: var(--ouro-c); }
+
+  .rotulo { margin-top: 120px; font-weight: 600; font-size: 22px; letter-spacing: .4em; text-transform: uppercase; color: var(--bronze); }
+  .escuro .rotulo { color: var(--ouro-c); }
+  h2 { font-family: "Cormorant"; font-weight: 500; font-size: 168px; line-height: .95; margin-top: 18px; letter-spacing: .005em; }
+  .script { font-family: "Great Vibes"; font-size: 86px; line-height: 1.1; margin-top: 4px; background: var(--brilho); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .claro .script { background: linear-gradient(100deg, #8E6E3E, #B08D57 45%, #C9A468 60%, #8E6E3E); -webkit-background-clip: text; background-clip: text; }
+
+  /* cartões de vidro */
+  .cartoes { display: grid; gap: 24px; margin-top: 64px; }
+  .cartao { display: flex; align-items: center; gap: 32px; padding: 34px 38px; border-radius: 36px; }
+  .claro .cartao { background: rgba(255,252,247,.72); border: 1.5px solid rgba(176,141,87,.3); box-shadow: 0 20px 50px rgba(142,110,62,.12); }
+  .escuro .cartao { background: rgba(244,235,221,.06); border: 1.5px solid rgba(201,164,104,.3); box-shadow: 0 20px 50px rgba(0,0,0,.3); }
+  .ico { flex: none; width: 108px; height: 108px; border-radius: 30px; display: grid; place-items: center; }
+  .claro .ico { background: linear-gradient(145deg, #FFF8EC, #EFDDBC); box-shadow: inset 0 0 0 1.5px rgba(176,141,87,.3); }
+  .escuro .ico { background: linear-gradient(145deg, rgba(201,164,104,.28), rgba(201,164,104,.08)); box-shadow: inset 0 0 0 1.5px rgba(201,164,104,.4); }
+  .ico svg { width: 54px; height: 54px; }
+  .num { font-family: "Cormorant"; font-weight: 600; font-size: 60px; font-variant-numeric: lining-nums; font-feature-settings: "lnum" 1; line-height: 1; color: var(--ouro-c); }
+  .cartao h3 { font-weight: 700; font-size: 38px; line-height: 1.15; }
+  .cartao p { font-weight: 400; font-size: 27px; line-height: 1.45; margin-top: 8px; }
+  .claro .cartao p { color: var(--tinta-2); }
+  .escuro .cartao p { color: rgba(244,235,221,.72); }
+
+  /* rodapé */
+  .rodape { position: absolute; left: 110px; right: 110px; bottom: 96px; display: flex; align-items: center; justify-content: space-between; font-weight: 500; font-size: 22px; letter-spacing: .18em; }
+  .claro .rodape { color: var(--bronze); }
+  .escuro .rodape { color: var(--ouro-c); }
+  .rodape .chip { display: inline-flex; align-items: center; gap: 12px; padding: 14px 24px; border-radius: 99px; font-weight: 700; letter-spacing: .14em; font-size: 20px; }
+  .claro .rodape .chip { background: var(--escuro); color: var(--marfim); }
+  .escuro .rodape .chip { background: var(--brilho); color: var(--escuro); }
+  .rodape .chip svg { width: 22px; height: 22px; }
+
+  /* acento agudo desenhado: o da Cormorant é alto demais para leitura rápida */
+  .u { position: relative; display: inline-block; }
+  .agudo { position: absolute; left: 50%; top: .02em; width: .075em; height: .2em; background: currentColor; border-radius: .04em; transform: translateX(-10%) skewX(-38deg); }
+
+  /* post com 3 cartões: mais compacto para não encostar no rodapé */
+  #agendar .rotulo { margin-top: 90px; }
+  #agendar .cartoes { margin-top: 50px; gap: 20px; }
+  #agendar .cartao { padding: 26px 34px; }
+  #agendar .ico { width: 96px; height: 96px; }
+
+  .faisca { position: absolute; color: var(--ouro-c); }
+  .faisca svg { width: 100%; height: 100%; display: block; }
+
+  /* faixa "novos serviços" */
+  .novos { position: absolute; left: 110px; right: 110px; bottom: 170px; text-align: center; font-weight: 600; font-size: 23px; letter-spacing: .22em; text-transform: uppercase; padding: 18px 0; border-top: 1.5px solid rgba(176,141,87,.35); border-bottom: 1.5px solid rgba(176,141,87,.35); }
+  .claro .novos { color: var(--bronze); }
+  .escuro .novos { color: var(--ouro-c); }
+  .novos span { font-style: normal; }
+
+  /* ---- feed novo: ajustes ---- */
+  .tres .rotulo { margin-top: 90px; }
+  .tres .cartoes { margin-top: 50px; gap: 20px; }
+  .tres .cartao { padding: 26px 34px; }
+  .tres .ico { width: 96px; height: 96px; }
+  .grade { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 44px; }
+  .grade .cartao { padding: 28px 28px; gap: 24px; }
+  .grade .ico { width: 84px; height: 84px; border-radius: 24px; }
+  .grade .ico svg { width: 44px; height: 44px; }
+  .grade h3 { font-size: 32px; }
+  .grade p { font-size: 23px; margin-top: 4px; }
+  .capa h2 { font-size: 150px; letter-spacing: .02em; }
+  .capa .nome2 { font-family: "Cormorant"; font-weight: 500; font-size: 150px; line-height: .95; letter-spacing: .02em; }
+  .capa .rotulo { margin-top: 74px; }
+  .capa .script { margin-top: 22px; }
+  #p5 .cartoes { margin-top: 60px; gap: 24px; }
+  #p5 .cartao { padding: 30px 36px; }
+  #p5 .ico { width: 102px; height: 102px; }
+  .selo { margin-top: 34px; display: inline-flex; align-items: center; gap: 14px; font-weight: 600; font-size: 24px; letter-spacing: .24em; text-transform: uppercase; padding: 16px 30px; border-radius: 99px; border: 1.5px solid rgba(176,141,87,.5); }
+  .escuro .selo { color: var(--ouro-c); }
+  .claro .selo { color: var(--bronze); }
+  .selo i { width: 12px; height: 12px; border-radius: 50%; background: var(--ouro-c); box-shadow: 0 0 0 6px rgba(201,164,104,.25); }
+
+  /* ---- chamadas: ganchos para parar o dedo ---- */
+  .gancho { margin-top: 70px; font-family: "Cormorant"; font-weight: 500; font-size: 124px; line-height: .98; letter-spacing: -.005em; }
+  .gancho em { font-family: "Great Vibes"; font-style: normal; font-weight: 400; font-size: 1.12em; background: var(--brilho); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .06em; }
+  .claro .gancho em { background: linear-gradient(100deg, #8E6E3E, #B08D57 45%, #C9A468 60%, #8E6E3E); -webkit-background-clip: text; background-clip: text; }
+  .chamada .lead { margin-top: 38px; font-size: 33px; line-height: 1.5; max-width: 800px; }
+  .claro .lead { color: var(--tinta-2); } .escuro .lead { color: rgba(244,235,221,.8); }
+  .lead b { font-weight: 700; } .claro .lead b { color: var(--tinta); } .escuro .lead b { color: var(--marfim); }
+  .pilulas { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 44px; }
+  .pilula { display: inline-flex; align-items: center; gap: 14px; padding: 18px 28px 18px 20px; border-radius: 99px; font-weight: 600; font-size: 27px; }
+  .claro .pilula { background: rgba(255,252,247,.8); border: 1.5px solid rgba(176,141,87,.35); box-shadow: 0 14px 34px rgba(142,110,62,.12); }
+  .escuro .pilula { background: rgba(244,235,221,.07); border: 1.5px solid rgba(201,164,104,.35); }
+  .pilula svg { width: 36px; height: 36px; flex: none; }
+  .selo-grande { position: absolute; right: 110px; top: 62px; width: 124px; height: 124px; border-radius: 50%; display: grid; place-items: center; }
+  .claro .selo-grande { background: linear-gradient(145deg, #FFF8EC, #EFDDBC); box-shadow: inset 0 0 0 2px rgba(176,141,87,.35), 0 24px 60px rgba(142,110,62,.22); }
+  .escuro .selo-grande { background: linear-gradient(145deg, rgba(201,164,104,.3), rgba(201,164,104,.07)); box-shadow: inset 0 0 0 2px rgba(201,164,104,.45), 0 24px 60px rgba(0,0,0,.4); }
+  .selo-grande svg { width: 62px; height: 62px; }
+  .cta { position: absolute; left: 110px; right: 110px; bottom: 150px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 30px 38px; border-radius: 99px; font-weight: 700; font-size: 34px; letter-spacing: .02em; }
+  .claro .cta { background: var(--escuro); color: var(--marfim); box-shadow: 0 24px 60px rgba(31,26,23,.28); }
+  .escuro .cta { background: var(--brilho); color: var(--escuro); box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+  .cta svg { width: 44px; height: 44px; flex: none; }
+  .aviso { position: absolute; left: 110px; right: 110px; bottom: 92px; text-align: center; font-weight: 500; font-size: 20px; letter-spacing: .06em; }
+  .claro .aviso { color: var(--bronze); } .escuro .aviso { color: var(--ouro-c); }
+</style>
+<style>
+  .story { height: 1920px; padding-top: 200px; }
+  .ag .rotulo { margin-top: 70px; }
+  .ag .gancho { margin-top: 16px; font-size: 128px; }
+  .ag .sub2 { margin-top: 18px; font-size: 31px; line-height: 1.45; color: rgba(244,235,221,.8); }
+  .linhas { margin-top: 34px; display: grid; gap: 16px; }
+  .linha { display: flex; align-items: center; gap: 26px; padding: 20px 30px; border-radius: 30px; background: rgba(244,235,221,.06); border: 1.5px solid rgba(201,164,104,.3); }
+  .linha .mes { font-family: "Cormorant"; font-weight: 600; font-size: 50px; min-width: 250px; }
+  .linha .txt { flex: 1; font-size: 26px; line-height: 1.35; color: rgba(244,235,221,.78); }
+  .tag { flex: none; font-weight: 700; font-size: 20px; letter-spacing: .16em; text-transform: uppercase; padding: 12px 20px; border-radius: 99px; }
+  .tag.cheio { border: 1.5px solid rgba(244,235,221,.35); color: rgba(244,235,221,.7); }
+  .tag.aberto { background: var(--brilho); color: var(--escuro); }
+  .linha.off .mes { color: rgba(244,235,221,.55); text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: rgba(201,164,104,.7); }
+  .linha.on { background: linear-gradient(145deg, rgba(201,164,104,.2), rgba(201,164,104,.06)); border-color: rgba(201,164,104,.6); box-shadow: 0 24px 60px rgba(0,0,0,.35); }
+  .cal { margin-top: 14px; display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px 8px; text-align: center; }
+  .cal b { font-size: 18px; font-weight: 700; letter-spacing: .1em; color: var(--ouro-c); padding-bottom: 4px; }
+  .cal span { font-size: 22px; font-weight: 500; padding: 6px 0; border-radius: 14px; color: rgba(244,235,221,.4); font-variant-numeric: tabular-nums; }
+  .cal span.sab { background: var(--brilho); color: var(--escuro); font-weight: 800; box-shadow: 0 8px 22px rgba(0,0,0,.35); }
+  .cal span.vazio { visibility: hidden; }
+  .story .gancho { font-size: 150px; margin-top: 40px; }
+  .story .linhas { margin-top: 70px; gap: 24px; }
+  .story .cal { gap: 12px; margin-top: 30px; }
+  .story .cal span { font-size: 28px; padding: 10px 0; }
+  .story .cal b { font-size: 22px; }
+  .story .cta { bottom: 210px; }
+  .story .aviso { bottom: 150px; }
+  .story .selo-grande { top: 190px; }
+</style>
+</head>
+<body>
+<section class="post chamada escuro ag " id="agenda-feed"><i class="luz a"></i><i class="luz b"></i><div class="pontos"></div><div class="arco um"></div><div class="arco dois"></div><span class="faisca" style="width:26px;height:26px;top:330px;right:150px"><svg viewBox="0 0 10 10"><path fill="currentColor" d="M5 0l1.2 3.8L10 5 6.2 6.2 5 10 3.8 6.2 0 5l3.8-1.2z"/></svg></span>
+<div class="topo"><div class="mini"><img src="simbolo-claro-transp.svg" alt="">STUDIO LA ROCHA</div></div>
+<div class="selo-grande"><svg viewBox="0 0 24 24" fill="none" stroke="#E3C88F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></svg></div>
+<div class="rotulo">Agenda da enfermeira Amanda</div>
+<h2 class="gancho">Novembro <em>lotado</em></h2>
+<p class="sub2">Obrigada pelo carinho! 🤍 Agora é a vez de dezembro.</p>
+<div class="linhas">
+  <div class="linha off"><span class="mes">Novembro</span><span class="txt">Todos os horários preenchidos</span><span class="tag cheio">Completo</span></div>
+  <div class="linha on"><div style="flex:1"><div style="display:flex;align-items:center;gap:26px"><span class="mes">Dezembro</span><span class="txt">Sábados com vagas abertas</span><span class="tag aberto">Abertos</span></div><div class="cal"><b>D</b><b>S</b><b>T</b><b>Q</b><b>Q</b><b>S</b><b>S</b><span class="vazio">0</span><span class="vazio">0</span><span>1</span><span>2</span><span>3</span><span>4</span><span class="sab">5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span class="sab">12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span class="sab">19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span class="sab">26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span class="vazio">0</span><span class="vazio">0</span></div></div></div>
+</div>
+<div class="cta"><span>Garanta o seu sábado · link na bio</span><svg viewBox="0 0 24 24" fill="none" stroke="#9C7A45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+<div class="aviso">Auriculoterapia · Limpeza de pele · Só para mulheres</div></section>
+<section class="post chamada escuro ag story" id="agenda-story"><i class="luz a"></i><i class="luz b"></i><div class="pontos"></div><div class="arco um"></div><div class="arco dois"></div><span class="faisca" style="width:26px;height:26px;top:330px;right:150px"><svg viewBox="0 0 10 10"><path fill="currentColor" d="M5 0l1.2 3.8L10 5 6.2 6.2 5 10 3.8 6.2 0 5l3.8-1.2z"/></svg></span>
+<div class="topo"><div class="mini"><img src="simbolo-claro-transp.svg" alt="">STUDIO LA ROCHA</div></div>
+<div class="selo-grande"><svg viewBox="0 0 24 24" fill="none" stroke="#E3C88F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></svg></div>
+<div class="rotulo">Agenda da enfermeira Amanda</div>
+<h2 class="gancho">Novembro <em>lotado</em></h2>
+<p class="sub2">Obrigada pelo carinho! 🤍 Agora é a vez de dezembro.</p>
+<div class="linhas">
+  <div class="linha off"><span class="mes">Novembro</span><span class="txt">Todos os horários preenchidos</span><span class="tag cheio">Completo</span></div>
+  <div class="linha on"><div style="flex:1"><div style="display:flex;align-items:center;gap:26px"><span class="mes">Dezembro</span><span class="txt">Sábados com vagas abertas</span><span class="tag aberto">Abertos</span></div><div class="cal"><b>D</b><b>S</b><b>T</b><b>Q</b><b>Q</b><b>S</b><b>S</b><span class="vazio">0</span><span class="vazio">0</span><span>1</span><span>2</span><span>3</span><span>4</span><span class="sab">5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span class="sab">12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span class="sab">19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span class="sab">26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span class="vazio">0</span><span class="vazio">0</span></div></div></div>
+</div>
+<div class="cta"><span>Garanta o seu sábado · link na bio</span><svg viewBox="0 0 24 24" fill="none" stroke="#9C7A45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+<div class="aviso">Auriculoterapia · Limpeza de pele · Só para mulheres</div></section>
+</body>
+</html>

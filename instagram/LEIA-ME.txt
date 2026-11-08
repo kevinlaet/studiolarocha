@@ -163,6 +163,25 @@ Para agendar, toque no link da bio. 🤍
 #studiolarocha #manicure #pedicure #unhas #salaodebelezamaua #maua
 
 
+3c. AVISO DE AGENDA DA AMANDA (novembro lotado, sábados de dezembro abertos)
+---------------------------------------------------------------------------
+aviso-agenda-dezembro-feed.png  → feed (4:5)
+aviso-agenda-dezembro-story.png → story (com figurinha de link para https://studiolarocha.com.br/agenda/?p=amanda)
+Fonte: fonte/aviso-agenda.html + exportar-aviso-agenda.cjs.
+
+Legenda:
+
+Novembro lotado! 🤍 Obrigada pelo carinho de cada uma de vocês.
+
+A agenda de dezembro já está aberta, com vagas aos sábados (5, 12, 19 e 26) para auriculoterapia e limpeza de pele com a enfermeira Amanda.
+
+Os horários vão sendo preenchidos, então garanta o seu pelo link da bio. ✨
+
+Atendimento só para mulheres · pagamento só no salão.
+
+#studiolarocha #auriculoterapia #limpezadepele #enfermagem #maua #agendaaberta
+
+
 3b. DESTAQUES (as bolinhas abaixo da bio)
 -----------------------------------------
 Pasta capas-destaques: 7 capas douradas (1 Serviços, 2 Preços, 3 Como chegar, 4 Agendar,
