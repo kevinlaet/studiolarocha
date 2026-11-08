@@ -69,7 +69,7 @@ Este arquivo é a memória do projeto. Quem continuar o trabalho (Claude ou pess
 - Próximo passo estratégico: **dia de fotos** (Sandra + Amanda juntas, retratos individuais, espaço/cadeiras/lavatório/maca, vídeo curto de 10–15s) e então carrossel, Reels e destaques com foto. Perfil só com arte ainda parece "vazio".
 
 ## 8b. Folhetos A5 (`folhetos/`)
-- 5 folhetos (um por destaque): Auriculoterapia, Limpeza de pele, Manicure e Pedicure, Massagem, Produtos. Gerar: `cd folhetos/fonte && python3 gerar.py && NODE_PATH=$(npm root -g) node exportar.cjs`. Saída: PNG A5 ~300 dpi + `folhetos-a5.pdf`. QR → `studiolarocha.com.br/links/?de=folheto`.
+- 5 folhetos (um por destaque): Auriculoterapia, Limpeza de pele, Manicure e Pedicure, Massagem, Produtos. Gerar: `cd folhetos/fonte && python3 gerar.py && NODE_PATH=$(npm root -g) node exportar.cjs`. Saída: PNG A5 600 dpi (3494x4963) + `folhetos-a5.pdf` (feito dos PNGs com `python3 pdf.py`). QR → `studiolarocha.com.br/links/?de=folheto`.
 - Itens que a Sandra ainda não confirmou levam selo "em breve" (pedicure, massagem, produtos). Auriculoterapia usa só "pode ajudar" e o aviso "não substitui tratamento médico" (mesmo texto do site da Amanda).
 - **Fora dos folhetos de propósito:** sex shop (regras do Meta e público do salão; só com decisão da Sandra, em versão discreta) e **Monjaro/tirzepatida** (medicamento de venda só com receita: proibido anunciar e vender fora de farmácia; risco para o COREN da Amanda).
 - Nada vai para a gráfica sem aprovação por escrito da Sandra e da Amanda.

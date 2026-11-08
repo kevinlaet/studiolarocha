@@ -12,7 +12,7 @@ Página de links do salão (para a bio do Instagram) e materiais de divulgação
 | `index.html` | Leva direto para `links/` |
 | `img/`, `fonts/` | Símbolo do logo (opção C) e as letras da marca |
 | `whatsapp/` | Pacote do WhatsApp Business: perfil, saudação, ausência, respostas rápidas, etiquetas e catálogo (o que falta é preenchido pela Sandra) |
-| `folhetos/` | 5 folhetos A5 (auriculoterapia, limpeza de pele, manicure e pedicure, massagem, produtos), PNG ~300 dpi e PDF; `fonte/gerar.py` + `exportar.cjs` geram de novo |
+| `folhetos/` | 5 folhetos A5 (auriculoterapia, limpeza de pele, manicure e pedicure, massagem, produtos), PNG 600 dpi e PDF; `fonte/gerar.py`, `exportar.cjs` e `pdf.py` geram de novo |
 | `instagram/` | Foto de perfil, os 6 primeiros posts, legendas e bio (`LEIA-ME.txt`); a pasta `fonte/` gera os PNGs de novo |
 
 ## Agenda única: salão e Amanda no mesmo banco
