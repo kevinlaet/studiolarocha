@@ -40,7 +40,7 @@ F = [
       assina='Só para mulheres · COREN-SP 617675'),
  dict(id='manicure-e-pedicure', tema='escuro', rotulo='Cuidado com a Sandra', h2='Manicure e Pedicure', script='caprichadas, do seu jeito',
       lead='Acabamento caprichado e atenção a cada detalhe, das mãos aos pés.',
-      sub='O que você encontra', itens=[('esmalte','Manicure','Acabamento impecável, do jeitinho que você gosta.'),('pe','Pedicure','Cuidado e carinho para os seus pés.',BREVE),('faisca','Atenção em cada detalhe','Do começo ao fim do atendimento.')],
+      sub='O que você encontra', itens=[('esmalte','Manicure','Acabamento impecável, do jeitinho que você gosta.'),('pe','Pedicure','Cuidado e carinho para os seus pés.'),('faisca','Atenção em cada detalhe','Do começo ao fim do atendimento.')],
       nota='Para agendar, escaneie o QR code e escolha com quem e como.',
       assina='Com a Sandra · Studio La Rocha'),
  dict(id='massagem', tema='claro', rotulo='Novidade no Studio', h2='Massagem', script='para desacelerar',

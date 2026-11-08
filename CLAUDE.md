@@ -65,12 +65,13 @@ Este arquivo é a memória do projeto. Quem continuar o trabalho (Claude ou pess
 
 ## 8. Instagram do salão — estado
 - **Posts refeitos (nov/2026)** porque a Amanda achou "as duas mulheres" sem sentido: agora diretos, sem texto sentimental. Ordem: 1 Apresentação (4 serviços + inauguração em breve), 2 Cabelo (Sandra), 3 Unhas (Sandra), 4 Saúde (Amanda), 5 Em breve (novos serviços e novas profissionais), 6 Agendar. Fonte: `instagram/fonte/feed.html`; gerar com `node exportar-feed.cjs` (2160x2700). Legendas em `instagram/LEIA-ME.txt`. Falta a Sandra e a Amanda aprovarem por escrito, e o Kevin postar. Não citar preço, horário, data, nem "desencravar unha" nos posts.
+- **3 posts de chamada** (gancho para prender atenção; a Amanda posta): Auriculoterapia ("Cabeça a mil? Sono leve?"), Limpeza de pele ("Pele cansada?"), Manicure e pedicure. Fonte `instagram/fonte/chamadas.html`, `node exportar-chamadas.cjs`; legendas na seção 3a do LEIA-ME. Saúde: só "pode ajudar" + aviso; sem prometer resultado. Pedicure já é oferecida (sem selo "em breve").
 - Bio: `Studio La Rocha | Salão em Mauá` / "Beleza, saúde e bem-estar ✨ / Cabelo · Unhas · Auriculoterapia · Limpeza de pele / Por @sandraaparecida5566 e @amandarochaat / 📍 Mauá - SP · Agende 👇". Trocar o link da bio e do WhatsApp Business para o domínio (HTTPS).
 - Próximo passo estratégico: **dia de fotos** (Sandra + Amanda juntas, retratos individuais, espaço/cadeiras/lavatório/maca, vídeo curto de 10–15s) e então carrossel, Reels e destaques com foto. Perfil só com arte ainda parece "vazio".
 
 ## 8b. Folhetos A5 (`folhetos/`)
 - 5 folhetos (um por destaque): Auriculoterapia, Limpeza de pele, Manicure e Pedicure, Massagem, Produtos. Gerar: `cd folhetos/fonte && python3 gerar.py && NODE_PATH=$(npm root -g) node exportar.cjs`. Saída: PNG A5 600 dpi (3494x4963) + `folhetos-a5.pdf` (feito dos PNGs com `python3 pdf.py`). QR → `studiolarocha.com.br/links/?de=folheto`.
-- Itens que a Sandra ainda não confirmou levam selo "em breve" (pedicure, massagem, produtos). Auriculoterapia usa só "pode ajudar" e o aviso "não substitui tratamento médico" (mesmo texto do site da Amanda).
+- Itens ainda não confirmados levam selo "em breve" (massagem, produtos); pedicure já existe. Auriculoterapia usa só "pode ajudar" e o aviso "não substitui tratamento médico" (mesmo texto do site da Amanda).
 - **Fora dos folhetos de propósito:** sex shop (regras do Meta e público do salão; só com decisão da Sandra, em versão discreta) e **Monjaro/tirzepatida** (medicamento de venda só com receita: proibido anunciar e vender fora de farmácia; risco para o COREN da Amanda).
 - Nada vai para a gráfica sem aprovação por escrito da Sandra e da Amanda.
 

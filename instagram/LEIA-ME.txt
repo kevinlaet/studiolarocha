@@ -124,6 +124,45 @@ Importante: nunca pedimos Pix ou sinal por mensagem. Se alguém pedir em nosso n
 #studiolarocha #maua #salaodebelezamaua #agendeja #novidades
 
 
+3a. POSTS DE CHAMADA (para a Amanda postar depois dos 6 primeiros)
+--------------------------------------------------------------------
+Mesmo tamanho (4:5). Postar um a cada 2 ou 3 dias, de preferência no fim da tarde. Mostrar no story também.
+
+--- chamada-1-auriculoterapia.png ---
+
+Cabeça a mil? Sono leve? 🌙
+
+A auriculoterapia pode ajudar você a desacelerar. É uma técnica feita em pontos da orelha, com atendimento de enfermagem (enfermeira Amanda Rocha, COREN-SP 617675).
+
+Atendimento só para mulheres. Os resultados variam de pessoa para pessoa e a auriculoterapia não substitui tratamento médico.
+
+Para agendar, toque no link da bio. 🤍
+
+#studiolarocha #auriculoterapia #enfermagem #bemestar #maua #saudemental
+
+
+--- chamada-2-limpeza-de-pele.png ---
+
+Pele cansada? Seu rosto merece carinho. ✨
+
+Limpeza de pele feita com técnica, higiene e a atenção de uma enfermeira. Sem pressa, só para você.
+
+Atendimento só para mulheres. Para garantir o seu horário, toque no link da bio. 🤍
+
+#studiolarocha #limpezadepele #cuidadocomapele #enfermagem #maua #bemestar
+
+
+--- chamada-3-manicure-e-pedicure.png ---
+
+Unhas que dão vontade de mostrar. 💅
+
+Manicure e pedicure com a Sandra: acabamento caprichado e atenção a cada detalhe, das mãos aos pés.
+
+Para agendar, toque no link da bio. 🤍
+
+#studiolarocha #manicure #pedicure #unhas #salaodebelezamaua #maua
+
+
 3b. DESTAQUES (as bolinhas abaixo da bio)
 -----------------------------------------
 Pasta capas-destaques: 7 capas douradas (1 Serviços, 2 Preços, 3 Como chegar, 4 Agendar,
@@ -152,5 +191,5 @@ Logo depois de postar:
   - Fotos de trabalhos de cabelo (só com autorização escrita da cliente)
 
 
-Arquivos-fonte: pasta "fonte" (feed.html + exportar-feed.cjs geram os 6 posts; perfil.html e destaques.html geram o resto).
+Arquivos-fonte: pasta "fonte" (feed.html + exportar-feed.cjs geram os 6 posts; chamadas.html + exportar-chamadas.cjs geram os 3 de chamada; perfil.html e destaques.html geram o resto).
 Desenvolvido por Kevin Laet
