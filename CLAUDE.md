@@ -27,6 +27,8 @@ Este arquivo é a memória do projeto. Quem continuar o trabalho (Claude ou pess
 9. Não pedir ao Kevin o que dá para resolver sozinho; quando precisar dele, dar passo a passo curto, valores para copiar **separados**.
 10. Não criar PR sem pedido. Não mexer no repo/Pages da Amanda (renomear/apagar quebra o QR dos 100 cartões já pedidos).
 
+- **Textos a evitar:** nada que soe como emagrecer/corpo ("chegar mais leve", "secar", "perder peso"); o Kevin vetou "chegue nas festas mais leve". Preferir cuidado, momento seu, se cuidar.
+
 ## 4. Padrão visual (identidade)
 - Cores: creme `#F7F1E8`, papel `#FFFCF7`, ouro `#B08D57` (claro `#D9BC86`, escuro `#8E6E3E`), bronze `#9C7A45`, tinta `#2B2622`, escuro `#1F1A17`, marfim `#F4EBDD`. Brilho dourado: `linear-gradient(100deg,#8E6E3E,#C9A468,#F1DEB4,#C9A468,#8E6E3E)`.
 - Fontes (locais em `fonts/`): **Cormorant** (títulos, caixa alta com letter-spacing), **Great Vibes** (assinatura), **Montserrat** (texto).
