@@ -13,7 +13,7 @@ Este arquivo é a memória do projeto. Quem continuar o trabalho (Claude ou pess
 - Local: **Vila Nova Mauá, Mauá - SP**. Endereço usado no cartão da Amanda: Rua Onivaldo Vanderlei Dionísio, 25 (confirmar com a Sandra antes de usar no salão). Salão com inauguração "em breve" (data não definida).
 - Slogan: "Beleza, saúde e bem-estar". Serviços: Cabelo (corte e coloração), Unhas (manicure), Auriculoterapia e Limpeza de pele (Amanda). **Novos serviços em breve** (aparece nos posts).
 - Modelo: o salão também **aluga cadeira/maca** para outras profissionais (parceiras). Contrato modelo existe como artifact; falta confirmar modelo de aluguel com a Sandra.
-- Instagram do salão: **@studiolarocha** (+100 seguidores, estava vazio; 6 posts prontos para publicar).
+- Instagram do salão: **@studiolarocha** (134 seguidores em 08/11/2026; 3 posts ANTIGOS no ar — versão "Agendar/Saúde/Beleza 1-3 de 3" com "Chame no WhatsApp"; foto de perfil e bio já certas; link da bio já é `studiolarocha.com.br/links/?de=instagram`). Nome do perfil ainda "STUDIO LA ROCHA": trocar para "Studio La Rocha | Salão em Mauá".
 
 ## 3. Regras que nunca mudam
 1. **Nunca inventar dados do salão** (serviços, preços, horários, endereço, datas, CNPJ). Perguntar.
@@ -52,7 +52,7 @@ Este arquivo é a memória do projeto. Quem continuar o trabalho (Claude ou pess
 - `kevinlaet/studiolarocha` (branch `main`, publicado em GitHub Pages) — este repo. Clone local: `/home/user/studiolarocha`.
   - `links/` página de links; `profissionais/`; `agenda/` (agenda do salão); `painel/` (cópia do painel da Amanda com a marca do salão; **não editar** `index.html`, `painel.js`, manifesto — só `painel/marca.js`); `config.js`; `whatsapp/` (pacote WhatsApp Business); `instagram/` (posts, perfil, destaques, legendas em `LEIA-ME.txt`; `fonte/` gera os PNGs); `ferramentas/painel.mjs` (sincroniza o painel).
 - `kevinlaet/AMANDA-ROCHA-AT` — site/painel/banco da Amanda (clone `/home/user/AMANDA-ROCHA-AT`). Banco em `supabase/schema.sql` e `atualizacao.sql` (idempotente). Painel em `admin/`. Testes em `tests/` (`npm test`, PGlite).
-  - Trabalho recente está na branch `claude/new-session-gjqujs` (login 30 dias, cadastro de clientes, story, domínio no SQL). **Falta o Kevin abrir novo PR para `main` e mesclar** com os testes verdes.
+  - Trabalho recente está na branch `claude/new-session-gjqujs` (sessão de 24 h + desconexão imediata, cadastro de clientes, story, domínio no SQL, CLAUDE.md ponteiro; último commit e2e25d2). **Falta o Kevin abrir novo PR para `main` e mesclar** com os testes verdes.
 - `kevinlaet/IA.RTS-Marketing-inteligente` — repositório irmão de marketing (branch de trabalho `claude/new-session-gjqujs`).
 - Branch de trabalho nas sessões do app: `claude/new-session-gjqujs`; no `studiolarocha` o Kevin publica direto em `main`.
 
@@ -61,7 +61,7 @@ Este arquivo é a memória do projeto. Quem continuar o trabalho (Claude ou pess
 - Sócias (Amanda, Sandra) veem/mexem em tudo; parceiras só no que é delas (garantido por RLS no banco). Chave "Só a minha agenda / Todas as profissionais" no painel.
 - **A maca (e cadeiras/mesa) trava** entre profissionais por trigger `checa_recurso` (`recurso_ocupado`).
 - **Sessão do painel (decisão do Kevin):** login aberto por **24 horas**, pede a senha **uma vez por dia** (sem opção de 30 dias). Algo estranho **desconecta todos os aparelhos na hora**: (1) programa automático logado com a senha dela; (2) alerta grave novo do guardião de tipo `cancelamentos` ou `intruso` (só os que surgem depois do login; o que já existia não conta). Código em `painel.js` (`alertaNovo`, `acessoEstranho`); testes em `AMANDA-ROCHA-AT/tests`.
-- Clientes: autocompletar nome ao enviar horários; cada profissional vê só as suas; depois de cadastrado, só sócias editam/excluem. Login "lembrar" 30 dias, Face ID ajuda.
+- Clientes: autocompletar nome ao enviar horários; cada profissional vê só as suas; depois de cadastrado, só sócias editam/excluem. E-mail lembrado no aparelho (senha pelo Chaveiro/Face ID; nunca guardada).
 - A agenda da Sandra é lotada: **ela não vai manter horários livres no painel**. Por isso foi descartada a ideia do story automático "Horários livres" (fica só como código na branch da Amanda).
 - Fluxo da página de links (atual): botões **Agendar online** (`profissionais/?modo=online` → "Ver horários" abre `agenda/?p=…`) e **Agendar pelo WhatsApp** (`?modo=whatsapp` → escolhe profissional e serviço → abre WhatsApp com saudação + resumo + origem).
 - **Números de WhatsApp:** centralizados no objeto `ZAP` em `profissionais/index.html`. Amanda → (11) 94890-7302 (`5511948907302`). Sandra → número do salão (11) 96768-2546 (`5511967682546`), por enquanto o mesmo. Quando a Sandra tiver número próprio, trocar **só a linha `Sandra`** em `ZAP`; o número do salão também está em `config.js`, `links/index.html` (tiles de Cabelo/Unhas/aluguel, `data-wa`) e `links/studio-la-rocha.vcf`. O número do salão será convertido em WhatsApp Business.
@@ -81,19 +81,41 @@ Este arquivo é a memória do projeto. Quem continuar o trabalho (Claude ou pess
 - **Fora dos folhetos de propósito:** sex shop (regras do Meta e público do salão; só com decisão da Sandra, em versão discreta) e **Monjaro/tirzepatida** (medicamento de venda só com receita: proibido anunciar e vender fora de farmácia; risco para o COREN da Amanda).
 - Nada vai para a gráfica sem aprovação por escrito da Sandra e da Amanda.
 
+## 8c. Instagram: o que está no ar e o que fazer em seguida
+- Estado real (screenshot do Kevin, 08/11): perfil com 3 posts antigos. Decisão recomendada: **arquivar** (não apagar) os 3 antigos e postar os 6 novos na ordem 1→6, no mesmo dia; fixar 1, 6 e 5.
+- Arquivos prontos em `instagram/` (todos 2160x2700, exceto story 2160x3840): `1-postar-primeiro-apresentacao` … `6-postar-por-ultimo-agendar`; `chamada-1/2/3-*`; `dica-1-pele`, `dica-2-unhas`, `dica-3-sono`; `aviso-agenda-dezembro-feed` e `-story`. Legendas em `LEIA-ME.txt` (seções 3, 3a, 3c, 3d). Ordem sugerida: bloco 1 (6 posts), depois aviso de dezembro, depois chamadas e dicas alternando (um a cada 2–3 dias).
+- Enviar à Sandra/Amanda **como documento** no WhatsApp (foto comprime). Aprovação por escrito antes de postar. Dicas: Amanda revisa pele e sono; Sandra revisa unhas. Aviso de dezembro: conferir que os sábados 12 e 19 estão abertos no painel; story com figurinha de link `https://studiolarocha.com.br/agenda/?p=amanda`.
+
+## 8d. Decisões e preferências do Kevin (aprendidas no chat)
+- Quer **qualidade alta** e que a cliente pense "que fofo, que capricho"; imagens sempre em alta resolução (reclamou quando saiu baixa). Prefere receber **imagens soltas** (PNG), enviadas no chat, a PDF.
+- Quer respostas **curtas, em português simples**, com "seu lado" (o que ele precisa fazer) separado.
+- Amanda não gostou do post "duas mulheres" (sem sentido): textos **diretos**, falando de serviços, novidades e como agendar.
+- Vetou "chegue nas festas mais leve" (parece emagrecer). Ver regra em "Textos a evitar".
+- Pedicure **já é oferecida** pela Sandra. Massagem e produtos (lingerie, perfumes, skincare) estão **em breve**. Sex shop e Monjaro **fora** de qualquer material (motivos em 8b). Se a Amanda for vender produtos de skincare, depende da decisão dela e de regras sanitárias; nada anunciado ainda.
+- Login do painel: **24 h**, pede senha 1x por dia, e **fecha na hora** ao detectar algo estranho (decisão em 09/11/2026).
+- Cartões de visita da Amanda (100 un.) já pedidos com QR antigo (`kevinlaet.github.io/AMANDA-ROCHA-AT/?o=cartao#agendar`): não apagar/renomear esse repo.
+- O Kevin pode trocar de modelo (Sonnet/Opus) no meio da conversa; o trabalho não depende disso.
+
+## 8e. Problemas conhecidos
+- Teste automático `painel em 320px … numeros: quebrado em 2 linhas "1 atendimento · R$ 0"` (AMANDA-ROCHA-AT/tests/ponta-a-ponta.test.mjs) **já falhava antes** e continua: layout do quadro "Seus números" em tela de 320px. Todo o resto passa.
+- PDF dos folhetos: o primeiro estava "bugado" para o Kevin; foi refeito a partir dos PNGs (`folhetos/fonte/pdf.py`). Se o Kevin reclamar de novo, mandar só os PNGs.
+- `www.studiolarocha.com.br` ainda pode mostrar aviso de certificado (não bloqueia).
+- Domínio e github.io não são acessíveis da sessão: sempre pedir teste no celular.
+
 ## 9. Pendências (atualizar sempre)
 **Com o Kevin**
 - DNS do Registro.br já ajustado (salvo com sucesso). Só conferir se o `www` ganhou certificado; trocar link da bio e do WhatsApp Business para o endereço sem `www`.
 - Escanear o QR do cartão da Amanda e confirmar o redirecionamento.
 - Abrir PR de `claude/new-session-gjqujs` → `main` (AMANDA-ROCHA-AT) e mesclar; rodar `atualizacao.sql` de novo no Supabase se preciso; conferir o painel da Amanda.
-- Postar os 6 posts; trocar link da bio/WhatsApp Business; enviar às duas as listas de perguntas; criar o acesso da Sandra quando vier o e-mail.
+- **Instagram:** arquivar os 3 posts antigos, trocar o nome do perfil, postar os 6 novos (depois de aprovação escrita), depois aviso de dezembro, chamadas e dicas; trocar o link do WhatsApp Business para `…/links/?de=whatsapp` (o da bio já está certo).
+- Enviar às duas as listas de perguntas; criar o acesso da Sandra quando vier o e-mail; combinar o **dia de fotos**.
 - Próximos cartões (reimpressão futura): incluir endereço e o site da Amanda; QR direto no domínio (`amandarochabemestar.com.br/?o=cartao#agendar`; salão: `studiolarocha.com.br/links/?de=cartao`).
 
 **Aguardando a Sandra:** serviços, preços e duração; horários de funcionamento; endereço e ponto de referência; data de inauguração; MEI/CNPJ/alvará/licença sanitária/contador; modelo de aluguel; e-mail do salão; decisão do WhatsApp Business / novo número dela; fotos; aprovação escrita dos posts.
 
 **Aguardando a Amanda:** uso da maca (quais serviços), como usa o espaço, horários de sábado e fim da promoção de R$ 75, contrato/CNPJ, configurar ntfy, foto.
 
-**Backlog do Claude:** fotos na página de profissionais; cartão de visita e cartaz do salão com QR; Google Perfil da Empresa; busca no INPI do nome; vale-presente e fidelidade (Amanda tem cartão de 5 carimbos); roteiros de vídeo; carrossel/Reels/destaques com fotos; follow-ups do contrato.
+**Backlog do Claude:** consertar o teste de 320px; mensagem curta para o dia de fotos (Kevin ainda não respondeu se quer); cartão de visita e cartaz do salão com QR (ofereci; sem resposta); calendário de 4 semanas de conteúdo (ver `instagram/ESTRATEGIA.md`); fotos na página de profissionais; cartão de visita e cartaz do salão com QR; Google Perfil da Empresa; busca no INPI do nome; vale-presente e fidelidade (Amanda tem cartão de 5 carimbos); roteiros de vídeo; carrossel/Reels/destaques com fotos; follow-ups do contrato.
 
 ## 10. Como trabalhar aqui (checklist antes de entregar)
 1. Ler este arquivo e o `README.md`.
