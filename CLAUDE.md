@@ -38,6 +38,8 @@ Todo texto (post, story, legenda, folheto, site) passa por esta revisão antes d
 5. **Ler em voz alta:** se soar estranho, travado ou "de robô", reescrever.
 6. Respeitar as regras de saúde, de "Textos a evitar" e de não inventar dados.
 
+7. **Legendas com SEO:** palavras que a cliente busca no começo da legenda e no texto (ex.: "auriculoterapia em Mauá", "manicure em Mauá", "ansiedade", "sono"), serviço + cidade/bairro, quem atende e como agendar. **Máximo de 5 hashtags** por post (regra do Instagram): 1 do serviço, 1–2 do tema, 1 de cidade (#maua) e #studiolarocha.
+
 ## 4. Padrão visual (identidade)
 - Cores: creme `#F7F1E8`, papel `#FFFCF7`, ouro `#B08D57` (claro `#D9BC86`, escuro `#8E6E3E`), bronze `#9C7A45`, tinta `#2B2622`, escuro `#1F1A17`, marfim `#F4EBDD`. Brilho dourado: `linear-gradient(100deg,#8E6E3E,#C9A468,#F1DEB4,#C9A468,#8E6E3E)`.
 - Fontes (locais em `fonts/`): **Cormorant** (títulos, caixa alta com letter-spacing), **Great Vibes** (assinatura), **Montserrat** (texto).
