@@ -29,6 +29,15 @@ Este arquivo é a memória do projeto. Quem continuar o trabalho (Claude ou pess
 
 - **Textos a evitar:** nada que soe como emagrecer/corpo ("chegar mais leve", "secar", "perder peso"); o Kevin vetou "chegue nas festas mais leve". Preferir cuidado, momento seu, se cuidar.
 
+## 3b. Qualidade do texto (regra do Kevin, 10/11/2026)
+Todo texto (post, story, legenda, folheto, site) passa por esta revisão antes de entregar:
+1. **Faz sentido e é pertinente:** cada frase diz uma coisa só e combina com a imagem e com quem lê (mulheres de Mauá, linguagem do dia a dia).
+2. **Sem redundância:** nada de repetir a mesma ideia com outras palavras (ex.: vetado "Escolha o seu e garanta o seu horário"). Cortar palavras que não acrescentam.
+3. **Cativante:** gancho no começo (pergunta, identificação, curiosidade), tom caloroso, verbos de ação.
+4. **Um chamado claro por peça:** uma ação só (votar, arrastar, tocar no link, salvar, agendar).
+5. **Ler em voz alta:** se soar estranho, travado ou "de robô", reescrever.
+6. Respeitar as regras de saúde, de "Textos a evitar" e de não inventar dados.
+
 ## 4. Padrão visual (identidade)
 - Cores: creme `#F7F1E8`, papel `#FFFCF7`, ouro `#B08D57` (claro `#D9BC86`, escuro `#8E6E3E`), bronze `#9C7A45`, tinta `#2B2622`, escuro `#1F1A17`, marfim `#F4EBDD`. Brilho dourado: `linear-gradient(100deg,#8E6E3E,#C9A468,#F1DEB4,#C9A468,#8E6E3E)`.
 - Fontes (locais em `fonts/`): **Cormorant** (títulos, caixa alta com letter-spacing), **Great Vibes** (assinatura), **Montserrat** (texto).
