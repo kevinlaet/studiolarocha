@@ -48,3 +48,9 @@ Olhar no Instagram (Insights) e anotar: alcance, **salvamentos e compartilhament
 4. Destaques com os stories de Serviços, Agendar, Equipe e Regras.
 5. Google Perfil da Empresa (depois do endereço confirmado).
 6. Calendário de 4 semanas com os cinco tipos de post.
+
+## 8. Banco de ideias (10/11/2026, ainda não produzidas)
+- **Story 1 "Qual é o seu cansaço?":** enquete (Cabeça a mil / Corpo travado / Os dois) → resposta mostra o serviço que pode ajudar → figurinha de link para a agenda da Amanda + "sábados 12 e 19".
+- **Story 2 "Pergunte à enfermeira":** caixinha de perguntas → a Amanda responde em stories nos dias seguintes → as melhores viram carrossel. Termina com figurinha de contagem regressiva para 12/12.
+- **Carrossel 1 "Auriculoterapia em 5 perguntas":** o que é, dói?, quanto tempo dura, para quem, como agendar. Respostas de "dói" e "quanto tempo" vêm da Amanda (não inventar).
+- **Carrossel 2 "Checklist de autocuidado de dezembro":** unhas, pele, mente, cabelo; um slide por item, último slide com como agendar e "salve e mande para uma amiga". Não prometer vaga da Sandra (agenda lotada).
