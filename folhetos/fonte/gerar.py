@@ -31,7 +31,7 @@ F = [
  dict(id='auriculoterapia', tema='escuro', rotulo='Cuidado com a Amanda', h2='Auriculoterapia', script='com a enfermeira Amanda',
       lead='Técnica complementar feita em pontos da orelha, com o cuidado de quem é da área da saúde.',
       sub='Pode ajudar com', itens=[('lua','Sono','Mais tranquilidade para descansar.'),('folha','Ansiedade e estresse','Apoio para desacelerar a mente.'),('coracao','Dores e tensões do dia a dia','Um cuidado para o corpo relaxar.')],
-      nota='Os resultados variam de pessoa para pessoa. A auriculoterapia não substitui tratamento médico.',
+      nota='Atendimento com horário marcado. Pagamento só no salão.',
       assina='Só para mulheres · COREN-SP 617675'),
  dict(id='limpeza-de-pele', tema='claro', rotulo='Cuidado com a Amanda', h2='Limpeza de pele', script='um momento só seu',
       lead='Cuidado com a sua pele, com técnica, higiene e a atenção de uma enfermeira.',
