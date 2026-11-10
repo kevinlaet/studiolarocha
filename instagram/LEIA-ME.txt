@@ -234,6 +234,45 @@ Dicas gerais de bem-estar, que não substituem avaliação médica. A enfermeira
 #studiolarocha #sonoreparador #bemestar #saudemental #auriculoterapia #enfermagem #maua
 
 
+3e. STORIES (pasta stories/) — postar em sequência, no mesmo dia
+-------------------------------------------------------------------
+STORY 1 (Amanda): "Qual o seu cansaço?"
+  tela 1 (story1-tela1-enquete): colocar a figurinha ENQUETE dentro do quadro tracejado.
+     Pergunta: "Qual o seu cansaço?"  Opções: "Cabeça a mil 🤯" e "Corpo travado 😮‍💨"
+  tela 2 (story1-tela2-auriculoterapia): sem figurinha.
+  tela 3 (story1-tela3-link-agenda): figurinha LINK em cima de "Toque no link".
+     Link: https://studiolarocha.com.br/agenda/?p=amanda   Texto da figurinha: "Agendar meu sábado"
+
+STORY 2 (Sandra): "Corte ou cor?"
+  tela 1 (story2-tela1-caixinha): figurinha PERGUNTAS dentro do quadro tracejado.
+     Texto: "Sua dúvida de corte ou cor 💇‍♀️"  → responder as perguntas nos dias seguintes (a Sandra fala, alguém grava 15 s).
+  tela 2 (story2-tela2-enquete): figurinha ENQUETE. Opções: "Corte novo ✂️" e "Cor nova 🎨" (ou QUIZ com 3: "Os dois 💛").
+  tela 3 (story2-tela3-link-whatsapp): figurinha LINK em cima de "Toque no link".
+     Link: https://studiolarocha.com.br/profissionais/?modo=whatsapp&de=instagram   Texto: "Chamar a Sandra"
+
+Dica de venda: quem votar na enquete, responder por mensagem direta no mesmo dia:
+  "Oi! Vi que você votou no story 🤍 Quer que eu te mande os horários?"  (conversa vira agendamento)
+
+
+3f. CARROSSEL "Checklist de autocuidado" (pasta carrossel-checklist/, 6 imagens, postar juntas na ordem 1→6)
+----------------------------------------------------------------------------------------------------------
+Legenda:
+
+Antes da correria de dezembro, faça o seu checklist de autocuidado ✨
+
+✔️ Unhas feitas: manicure e pedicure com a Sandra
+✔️ Pele cuidada: limpeza de pele com a enfermeira Amanda
+✔️ Mente tranquila: auriculoterapia com a enfermeira Amanda
+✔️ Cabelo em dia: corte e coloração com a Sandra
+
+Quantos você já marcou? Conta aqui nos comentários 👇
+Salve este post e mande para aquela amiga que também precisa se cuidar 💛
+
+Agende pelo link da bio: online ou pelo WhatsApp. Pagamento só no salão.
+
+#studiolarocha #autocuidado #salaodebelezamaua #maua #manicure #limpezadepele #auriculoterapia #cabelo
+
+
 3b. DESTAQUES (as bolinhas abaixo da bio)
 -----------------------------------------
 Pasta capas-destaques: 7 capas douradas (1 Serviços, 2 Preços, 3 Como chegar, 4 Agendar,
