@@ -17,7 +17,7 @@ Objetivo: transformar moradoras de Mauá que veem o perfil em **agendamentos**, 
 - **Reels:** 1 a 2 por semana assim que houver vídeo (10 a 15 s do espaço, preparo de bancada, antes de começar o atendimento). Reels é o que mais alcança quem não segue.
 
 ## 3. Crescer com qualidade (grátis)
-1. **Localização:** marcar "Mauá, SP" em todo post e story; usar hashtags locais (#maua #vilanovamaua #salaodebelezamaua).
+1. **Localização:** marcar "Mauá, SP" em todo post e story; usar hashtags locais (#maua #salaodebelezamaua).
 2. **Vizinhança primeiro:** seguir e interagir com negócios e moradoras do bairro; pedir para as clientes e a família **marcarem @studiolarocha** e compartilharem.
 3. **Indicação:** cartão de fidelidade e "traga uma amiga" (o benefício só com a Sandra decidindo).
 4. **Parcerias locais:** perfis de bairro, lojas, academias, clínicas (troca de divulgação).

@@ -5,7 +5,7 @@ Nome do chat: **Studio La rocha**
 Cole isto no começo do novo chat:
 
 ---
-Estamos continuando o projeto **Studio La Rocha** (salão em Vila Nova Mauá, Mauá-SP; Sandra é a dona, Amanda é a sócia 50% e enfermeira; eu sou o Kevin, marido da Amanda). Leia primeiro o `CLAUDE.md` do repositório `kevinlaet/studiolarocha` (e o `README.md`): ele tem as pessoas, as regras que nunca mudam, o padrão visual, os endereços, a agenda e as pendências. Depois leia `instagram/ESTRATEGIA.md` e `instagram/LEIA-ME.txt`.
+Estamos continuando o projeto **Studio La Rocha** (salão em Mauá-SP; Sandra é a dona, Amanda é a sócia 50% e enfermeira; eu sou o Kevin, marido da Amanda). Leia primeiro o `CLAUDE.md` do repositório `kevinlaet/studiolarocha` (e o `README.md`): ele tem as pessoas, as regras que nunca mudam, o padrão visual, os endereços, a agenda e as pendências. Depois leia `instagram/ESTRATEGIA.md` e `instagram/LEIA-ME.txt`.
 
 Onde paramos (09/11/2026):
 - Site, links, agenda, painel e domínio **studiolarocha.com.br** estão no ar (sem `www` nos materiais).
