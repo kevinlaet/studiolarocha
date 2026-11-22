@@ -112,6 +112,43 @@ input:focus,select:focus{border-color:var(--teal)}
 .prox .pl .quando{color:var(--ink);font-weight:700}
 .lemb{font-weight:700;font-size:13px!important;color:var(--warn)!important}
 .lemb.ok{color:var(--ok)!important}
+/* retornos: cartões claros, com a inicial da cliente em pêssego, data em pílula e ações em uma linha */
+.ret-h svg{width:22px;height:22px}
+.ret{display:grid;gap:12px;margin-bottom:12px;padding:16px;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:0 6px 18px rgba(11,95,89,.06)}
+.ret.atras{background:linear-gradient(180deg,#FFF5F2,#fff 70%);border-color:#F2CFC6}
+.ret-top{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.ret-av{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,var(--peach-l),var(--peach));color:var(--teal-d);font-family:Cormorant,Georgia,serif;font-weight:600;font-size:26px;line-height:1}
+.ret-q{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+.ret-q b{font-size:17px;line-height:1.25;overflow-wrap:anywhere}
+.ret-q>span:not(.ret-dt):not(.tag-prof){font-size:14px;color:var(--muted)}
+.ret-dt{margin-top:4px;font-size:12.5px;font-weight:800;letter-spacing:.2px;padding:5px 11px;border-radius:99px;background:#F1E6D3;color:var(--teal-d);white-space:nowrap}
+.ret-dt.hoje{background:var(--peach);color:var(--teal-d)}
+.ret-dt.atras{background:var(--bad-bg);color:var(--bad)}
+.ret-obs{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.4;color:var(--ink);background:var(--cream);border:1px dashed var(--peach);border-radius:14px;padding:10px 12px}
+.ret-obs svg{flex:none;width:18px;height:18px;margin-top:1px;color:var(--teal)}
+.ret-env{display:flex;align-items:center;gap:6px;font-size:13.5px;font-weight:700;color:var(--ok)}
+.ret-env svg{width:16px;height:16px}
+.ret-zap svg{width:24px;height:24px}
+.ret-acoes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.ret-acoes button{min-height:56px;border-radius:14px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font-weight:700;font-size:13px;line-height:1.15;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:6px 4px;text-align:center}
+.ret-acoes svg{width:20px;height:20px;color:var(--muted)}
+.ret-acoes .sim{border-color:#BFE6CD;color:var(--ok)}.ret-acoes .sim svg{color:var(--ok)}
+.ret-acoes [aria-expanded=true]{background:var(--sand);border-color:var(--peach)}
+.adiar{display:grid;gap:10px;padding:14px;border-radius:16px;background:var(--sand)}
+.adiar-t{font-weight:700;font-size:14px;color:var(--teal-d)}
+.adiar .chip{flex:1;min-width:0;white-space:nowrap;font-size:14px;padding:8px 4px}
+.adiar-d{display:grid;grid-template-columns:1fr auto;gap:8px}.adiar-d .btn{width:auto;min-height:52px}
+.ret-rem{background:none;border:0;color:var(--bad);font-weight:700;font-size:14px;min-height:40px;text-decoration:underline;text-underline-offset:3px}
+.ret-vazio{display:flex;gap:12px;align-items:center;padding:16px;border-radius:18px;background:#fff;border:1px dashed var(--line);color:var(--muted);font-size:15px}
+.ret-vazio svg{flex:none;width:26px;height:26px;color:var(--peach)}
+.ret-vazio small{font-size:13px}
+.ret-bt{background:var(--peach-l);color:var(--teal-d);border-color:var(--peach)}
+.ret-bt svg,.ret-info>svg{width:20px;height:20px;flex:none}
+.ret-info{margin:12px 0 6px;padding:12px 14px;border-radius:14px;background:var(--peach-l);color:var(--teal-d);display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;font-size:14px}
+.ret-info b{display:block;font-size:15px}.ret-info span:not(.st){display:block;color:var(--ink)}
+.ret-form{display:grid}
+.sab-sug{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:6px;color:var(--warn);font-weight:600}
+.sab-sug button{min-height:40px;padding:6px 14px;border-radius:99px;border:1.5px solid var(--peach);background:var(--peach-l);color:var(--teal-d);font-weight:700}
 /* dia da agenda com botão de opções */
 .dia h3{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .dia-op{background:none;border:1.5px solid var(--line);border-radius:10px;padding:6px 12px;min-height:38px;font-weight:700;font-size:13px;color:var(--teal)}
@@ -278,8 +315,8 @@ input[type=date]::-webkit-date-and-time-value,input[type=time]::-webkit-date-and
 .num-kpi.tres b{font-size:18px}
 .num-kpi span{font-size:13px;color:var(--muted)}
 .num-serv{list-style:none;margin-top:12px;display:grid;gap:6px}
-.num-serv li{display:flex;justify-content:space-between;gap:10px;font-size:14.5px;border-top:1px solid var(--line);padding-top:6px}
-.num-serv li span:last-child{color:var(--muted);text-align:right}
+.num-serv li{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2px 10px;font-size:14.5px;border-top:1px solid var(--line);padding-top:6px}
+.num-serv li span:last-child{color:var(--muted);text-align:right;white-space:nowrap;margin-left:auto}
 .num-meses{list-style:none;display:grid;gap:10px}
 .num-meses li{display:grid;grid-template-columns:34px minmax(0,1fr) auto;align-items:center;gap:10px;font-size:14px}
 .num-meses .nm{font-weight:700;color:var(--muted)}
@@ -344,7 +381,7 @@ header h1{font-family:Cormorant,Georgia,serif;font-weight:600;font-size:20px;let
       <div class="row"><button class="btn main" type="button" data-ir="agenda" data-abrir-form data-guia-ok>Abrir meus horários</button><button class="btn ghost" type="button" data-guia-ok>Já entendi</button></div>
     </div>
     <div class="aba-topo"><h2 class="aba-t">Início</h2><p>O que precisa de você agora.</p></div>
-    <details class="ajuda"><summary>Como usar esta parte</summary><ol><li>Quando uma cliente pede um horário pelo site, ele aparece em <b>Pedidos</b>. Toque em <b>Confirmar</b>.</li><li>Logo depois, toque em <b>Avisar no WhatsApp</b>: a mensagem já vai pronta.</li><li>Um dia antes do atendimento, toque em <b>Mandar lembrete</b>.</li></ol></details>
+    <details class="ajuda"><summary>Como usar esta parte</summary><ol><li>Quando uma cliente pede um horário pelo site, ele aparece em <b>Pedidos</b>. Toque em <b>Confirmar</b>.</li><li>Logo depois, toque em <b>Avisar no WhatsApp</b>: a mensagem já vai pronta.</li><li>Um dia antes do atendimento, toque em <b>Mandar lembrete</b>.</li><li>Depois do atendimento, abra o horário e toque em <b>Marcar retorno</b>. Quando chegar a data, ela aparece em <b>Retornos próximos</b> com a mensagem pronta.</li></ol></details>
     <div class="card num" id="numeros" hidden></div>
     <h2>Pedidos para responder <span class="badge" id="nPed" hidden></span></h2>
     <div id="pedidos"><p class="vazio">Carregando…</p></div>
@@ -352,6 +389,13 @@ header h1{font-family:Cormorant,Georgia,serif;font-weight:600;font-size:20px;let
     <h2>Próximos atendimentos</h2>
     <p class="dica" style="margin:-6px 0 10px">Confirmados nos próximos 7 dias. Um dia antes, toque em “Mandar lembrete”.</p>
     <div id="proximos"></div>
+
+    <div id="blocoRet" hidden>
+    <h2 class="ret-h"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg>Retornos próximos <span class="badge" id="nRet" hidden></span></h2>
+    <p class="dica" style="margin:-6px 0 12px">Quem combinou de voltar nos próximos 7 dias. Os atrasados vêm primeiro.</p>
+    <div id="retornos"></div>
+    </div>
+
 
     <div class="atalhos"><button class="btn ghost" type="button" data-ir="agenda" data-abrir-form>Abrir novos horários</button><button class="btn ghost" type="button" data-ir="enviar">Enviar horários para uma cliente</button><button class="btn ghost" type="button" data-acao="story" data-quando="hoje">Story: horários livres de hoje</button><a class="btn ghost ver-site" data-como-cliente href="../?o=painel#agendar" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Visualizar agenda como cliente</a></div>
     </section>

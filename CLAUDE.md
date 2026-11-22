@@ -69,7 +69,7 @@ Todo texto (post, story, legenda, folheto, site) passa por esta revisão antes d
 - `kevinlaet/studiolarocha` (branch `main`, publicado em GitHub Pages) — este repo. Clone local: `/home/user/studiolarocha`.
   - `links/` página de links; `profissionais/`; `agenda/` (agenda do salão); `painel/` (cópia do painel da Amanda com a marca do salão; **não editar** `index.html`, `painel.js`, manifesto — só `painel/marca.js`); `config.js`; `whatsapp/` (pacote WhatsApp Business); `instagram/` (posts, perfil, destaques, legendas em `LEIA-ME.txt`; `fonte/` gera os PNGs); `ferramentas/painel.mjs` (sincroniza o painel).
 - `kevinlaet/AMANDA-ROCHA-AT` — site/painel/banco da Amanda (clone `/home/user/AMANDA-ROCHA-AT`). Banco em `supabase/schema.sql` e `atualizacao.sql` (idempotente). Painel em `admin/`. Testes em `tests/` (`npm test`, PGlite).
-  - Trabalho recente está na branch `claude/new-session-gjqujs` (sessão de 24 h + desconexão imediata, cadastro de clientes, story, domínio no SQL, CLAUDE.md ponteiro; último commit e2e25d2). **Falta o Kevin abrir novo PR para `main` e mesclar** com os testes verdes.
+  - Tudo publicado em `site-v1`/`main` em 22/11 (sessão de 24 h, cadastro de clientes, story, retornos). Falta o Kevin rodar `supabase/atualizacao.sql` no Supabase.
 - `kevinlaet/IA.RTS-Marketing-inteligente` — repositório irmão de marketing (branch de trabalho `claude/new-session-gjqujs`).
 - Branch de trabalho nas sessões do app: `claude/new-session-gjqujs`; no `studiolarocha` o Kevin publica direto em `main`.
 
@@ -78,6 +78,7 @@ Todo texto (post, story, legenda, folheto, site) passa por esta revisão antes d
 - Sócias (Amanda, Sandra) veem/mexem em tudo; parceiras só no que é delas (garantido por RLS no banco). Chave "Só a minha agenda / Todas as profissionais" no painel.
 - **A maca (e cadeiras/mesa) trava** entre profissionais por trigger `checa_recurso` (`recurso_ocupado`).
 - **Sessão do painel (decisão do Kevin):** login aberto por **24 horas**, pede a senha **uma vez por dia** (sem opção de 30 dias). Algo estranho **desconecta todos os aparelhos na hora**: (1) programa automático logado com a senha dela; (2) alerta grave novo do guardião de tipo `cancelamentos` ou `intruso` (só os que surgem depois do login; o que já existia não conta). Código em `painel.js` (`alertaNovo`, `acessoEstranho`); testes em `AMANDA-ROCHA-AT/tests`.
+- **Retornos (no ar 22/11):** na ficha do atendimento "Marcar retorno" (15–60 dias ou data + orientação); no Início "Retornos próximos" com WhatsApp pronto, Agendou / Não respondeu / Adiar. Nada é enviado sozinho. Detalhes no `CLAUDE.md` do AMANDA-ROCHA-AT (seção 4b). Depende do `atualizacao.sql` rodado no Supabase.
 - Clientes: autocompletar nome ao enviar horários; cada profissional vê só as suas; depois de cadastrado, só sócias editam/excluem. E-mail lembrado no aparelho (senha pelo Chaveiro/Face ID; nunca guardada).
 - A agenda da Sandra é lotada: **ela não vai manter horários livres no painel**. Por isso foi descartada a ideia do story automático "Horários livres" (fica só como código na branch da Amanda).
 - Fluxo da página de links (atual): botões **Agendar online** (`profissionais/?modo=online` → "Ver horários" abre `agenda/?p=…`) e **Agendar pelo WhatsApp** (`?modo=whatsapp` → escolhe profissional e serviço → abre WhatsApp com saudação + resumo + origem).
@@ -128,7 +129,7 @@ Todo texto (post, story, legenda, folheto, site) passa por esta revisão antes d
 **Com o Kevin**
 - DNS do Registro.br já ajustado (salvo com sucesso). Só conferir se o `www` ganhou certificado; trocar link da bio e do WhatsApp Business para o endereço sem `www`.
 - Escanear o QR do cartão da Amanda e confirmar o redirecionamento.
-- Abrir PR de `claude/new-session-gjqujs` → `main` (AMANDA-ROCHA-AT) e mesclar; rodar `atualizacao.sql` de novo no Supabase se preciso; conferir o painel da Amanda.
+- **Rodar `supabase/atualizacao.sql` no Supabase** (SQL Editor › colar › Run): liga os retornos e o cadastro de clientes. Depois conferir o painel da Amanda e do salão no celular.
 - **Instagram:** arquivar os 3 posts antigos, trocar o nome do perfil, postar os 6 novos (depois de aprovação escrita), depois aviso de dezembro, chamadas e dicas; trocar o link do WhatsApp Business para `…/links/?de=whatsapp` (o da bio já está certo).
 - Enviar às duas as listas de perguntas; criar o acesso da Sandra quando vier o e-mail; combinar o **dia de fotos**.
 - Próximos cartões (reimpressão futura): incluir endereço e o site da Amanda; QR direto no domínio (`amandarochabemestar.com.br/?o=cartao#agendar`; salão: `studiolarocha.com.br/links/?de=cartao`).
