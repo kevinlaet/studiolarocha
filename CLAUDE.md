@@ -11,7 +11,7 @@ Este arquivo é a memória do projeto. Quem continuar o trabalho (Claude ou pess
 ## 2. O negócio
 - Nome **sempre** "**Studio La Rocha**" ("Studio" sem acento; nunca Stúdio, Estudio, La Rocha Studio). Verificado: nenhum salão com esse nome encontrado.
 - Local: **Vila Nova Mauá, Mauá - SP**. Endereço usado no cartão da Amanda: Rua Onivaldo Vanderlei Dionísio, 25 (confirmar com a Sandra antes de usar no salão). Salão com inauguração "em breve" (data não definida).
-- Slogan: "Beleza, saúde e bem-estar". Serviços: Cabelo (corte e coloração), Unhas (manicure), Auriculoterapia e Limpeza de pele (Amanda). **Novos serviços em breve** (aparece nos posts).
+- Slogan: "Beleza, saúde e bem-estar". Serviços: Cabelo (corte e coloração), Unhas (manicure e pedicure), **Sobrancelhas** (Sandra, informado pelo Kevin em 23/11), Auriculoterapia e Limpeza de pele (Amanda). **Novos serviços em breve** (aparece nos posts).
 - Modelo: o salão também **aluga cadeira/maca** para outras profissionais (parceiras). Contrato modelo existe como artifact; falta confirmar modelo de aluguel com a Sandra.
 - Instagram do salão: **@studiolarocha** (134 seguidores em 08/11/2026; 3 posts ANTIGOS no ar — versão "Agendar/Saúde/Beleza 1-3 de 3" com "Chame no WhatsApp"; foto de perfil e bio já certas; link da bio já é `studiolarocha.com.br/links/?de=instagram`). Nome do perfil ainda "STUDIO LA ROCHA": trocar para "Studio La Rocha | Salão em Mauá".
 
@@ -94,6 +94,7 @@ Todo texto (post, story, legenda, folheto, site) passa por esta revisão antes d
 - **Lote 15/11:** `instagram/lote-2026-11-15/` com 6 stories interativos (esmalte, mito/verdade do corte + resposta com link da Sandra, slider "dia só seu", quiz auriculoterapia, sábados da Amanda) e 3 carrosséis de 3 slides (unhas para as festas, cuidados com a cor, sábado com a Amanda). Fonte `fonte/lote-1511.html` + `exportar-lote-1511.cjs`; legendas e figurinhas no LEIA-ME (3h). Formato "3 slides" funciona bem como padrão.
 - **Campanha Black Friday: CANCELADA (20/11).** A Amanda não aceitou "2 por R$ 100": para ela **R$ 75 já é a promoção** (inauguração até 19/12; depois R$ 85). Não criar pacotes/descontos sobre a limpeza sem ela pedir. Artes ficam em `instagram/campanha-black-friday/` só como base de layout. Agenda dela até 31/12 quase cheia (só 12/12 18h20 livre na consulta de 20/11).
 - **Story "Sobrou um horário" (20/11):** `instagram/stories/story-ultimo-horario-12-12.png` — novo estilo (foto de ambiente + cartão claro em formato de ingresso), 12/12 às 18h20, R$ 75, link da agenda da Amanda. Fonte `fonte/story-ultimo-horario.html`. Postar só se o horário seguir livre.
+- **Semana 23/11 (para aprovar):** `instagram/semana-2026-11-23/` — Carrossel A "Depois da sessão eu…" (fecha com "Não foi sorte. Foi cuidado."), Carrossel B "Sua pele / respira / de novo." (3 telas cada) e 7 stories seg→dom (apresentação Sandra+Amanda, 3 sinais, enquete, como é a limpeza, novembro lotou, sábado tem horário, R$ 75). Visual "clínica premium" claro: papel, filetes e cantos dourados, vidro, grade fina, Cormorant itálico em dourado. Inspiração de formato: @vibeterapias (frase quebrada em telas); nada copiado. Legendas e textos no `LEIA-ME.md` da pasta.
 - **Estratégia de vendas e crescimento:** `instagram/ESTRATEGIA.md` (5 tipos de post, ritmo, crescimento local, medição, o que não fazer). Seguir como guia de todo conteúdo novo.
 - Bio: `Studio La Rocha | Salão em Mauá` / "Beleza, saúde e bem-estar ✨ / Cabelo · Unhas · Auriculoterapia · Limpeza de pele / Por @sandraaparecida5566 e @amandarochaat / 📍 Mauá - SP · Agende 👇". Trocar o link da bio e do WhatsApp Business para o domínio (HTTPS).
 - Próximo passo estratégico: **dia de fotos** (Sandra + Amanda juntas, retratos individuais, espaço/cadeiras/lavatório/maca, vídeo curto de 10–15s) e então carrossel, Reels e destaques com foto. Perfil só com arte ainda parece "vazio".
@@ -137,6 +138,8 @@ Todo texto (post, story, legenda, folheto, site) passa por esta revisão antes d
 **Aguardando a Sandra:** serviços, preços e duração; horários de funcionamento; endereço e ponto de referência; data de inauguração; MEI/CNPJ/alvará/licença sanitária/contador; modelo de aluguel; e-mail do salão; decisão do WhatsApp Business / novo número dela; fotos; aprovação escrita dos posts.
 
 **Aguardando a Amanda:** uso da maca (quais serviços), como usa o espaço, horários de sábado e fim da promoção de R$ 75, contrato/CNPJ, configurar ntfy, foto.
+
+**Créditos da IA de imagens (OpenAI) acabaram em 23/11:** para gerar fotos novas, o Kevin precisa recarregar em platform.openai.com › Billing.
 
 **Backlog do Claude:** consertar o teste de 320px; mensagem curta para o dia de fotos (Kevin ainda não respondeu se quer); cartão de visita e cartaz do salão com QR (ofereci; sem resposta); calendário de 4 semanas de conteúdo (ver `instagram/ESTRATEGIA.md`); fotos na página de profissionais; cartão de visita e cartaz do salão com QR; Google Perfil da Empresa; busca no INPI do nome; vale-presente e fidelidade (Amanda tem cartão de 5 carimbos); roteiros de vídeo; carrossel/Reels/destaques com fotos; follow-ups do contrato.
 
