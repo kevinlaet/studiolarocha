@@ -24,7 +24,7 @@ html = troca(html, '<meta name="theme-color" content="#0B5F59">', '<meta name="t
 html = troca(html, '<link rel="icon" href="../img/logo.svg" type="image/svg+xml">', '<link rel="icon" href="../img/simbolo.svg" type="image/svg+xml">');
 html = troca(html, '<h1>Amanda Rocha</h1>', '<h1>Studio La Rocha</h1>');
 html = troca(html, '<h1 id="cabNome">Amanda Rocha</h1>', '<h1 id="cabNome">Studio La Rocha</h1>');
-html = troca(html, '<b>Bem-vinda, Amanda!</b>', '<b>Bem-vinda!</b>');
+html = troca(html, '<img class="cab-logo" src="../img/logo.svg"', '<img class="cab-logo" src="../img/simbolo.svg"');
 html = troca(html, '<script src="../agenda.js"></script>', '<script src="marca.js"></script>');
 // cores do salão: dourado e marrom quase preto (as variáveis mantêm os nomes do painel da Amanda)
 // os tons verde-azulados fixos do painel da Amanda viram os beges do salão (o verde de "confirmado" é de estado e fica)
@@ -33,6 +33,7 @@ for (const [de, para] of Object.entries(BEGES)) html = html.split(de).join(para)
 html = troca(html, '</style>', `/* Studio La Rocha */
 :root{--teal:#2B2622;--teal-d:#1F1A17;--peach:#C9A468;--peach-l:#F4EBDD;--cream:#F7F1E8;--sand:#EFE5D6;--ink:#2B2622;--muted:#6A6058;--line:#E3D3BC}
 header h1{font-family:Cormorant,Georgia,serif;font-weight:600;font-size:20px;letter-spacing:.16em;text-transform:uppercase;color:var(--peach)}
+.cab-logo{background:#F4EBDD;padding:7px;object-fit:contain}
 </style>`);
 html = troca(html, '<!doctype html>', '<!doctype html>\n<!-- Gerado por ferramentas/painel.mjs a partir do painel da Amanda. Não edite aqui: rode o script de novo. -->');
 
